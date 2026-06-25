@@ -1,0 +1,9 @@
+/* =========================================================
+   補助金ポケット — Design System
+   Root style entry point. Consumers link THIS file only.
+   Keep this as @import lines exclusively — no rules here.
+   ========================================================= */
+@import "tokens/fonts.css";
+@import "tokens/colors.css";
+@import "tokens/typography.css";
+@import "tokens/spacing.css";

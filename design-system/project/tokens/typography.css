@@ -1,0 +1,35 @@
+/* =========================================================
+   補助金ポケット — Typography tokens
+   System-first Japanese sans stack; Noto Sans JP webfont fallback.
+   ========================================================= */
+:root {
+  /* ===== Family ===== */
+  --font-sans: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+               "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  --font: var(--font-sans);
+
+  /* ===== Type scale ===== */
+  --fs-display: 40px;  /* hero numerals (8件 / 68%) */
+  --fs-h1:      26px;  /* completion headline */
+  --fs-h2:      22px;  /* screen heading */
+  --fs-title:   19px;  /* card title / subsidy name */
+  --fs-body-lg: 17px;  /* questions / checklist rows */
+  --fs-body:    15px;  /* body copy / descriptions */
+  --fs-label:   13px;  /* labels / meta */
+  --fs-caption: 12px;  /* captions / footnotes */
+
+  /* ===== Line height ===== */
+  --lh-tight: 1.2;  /* @kind font */
+  --lh-snug:  1.4;  /* @kind font */
+  --lh-body:  1.6;  /* @kind font */
+
+  /* ===== Weight ===== */
+  --fw-regular: 400;  /* @kind font */
+  --fw-medium:  500;  /* @kind font */
+  --fw-bold:    700;  /* @kind font */
+  --fw-heavy:   800;  /* @kind font */
+
+  /* ===== Letter spacing ===== */
+  --ls-tight: -1px;   /* @kind font */
+  --ls-normal: 0;     /* @kind font */
+}

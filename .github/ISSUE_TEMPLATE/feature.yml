@@ -1,0 +1,54 @@
+name: Feature work
+description: Product feature or user-facing workflow work
+title: "[Feature] "
+labels:
+  - type:feature
+  - status:ready
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What user or business outcome should this issue deliver?
+      placeholder: "Example: Collect applicant confirmation fields before subsidy matching."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included in this issue?
+      placeholder: "- UI changes\n- API changes\n- Tests"
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      description: What should not be implemented in this issue?
+      placeholder: "- Payment\n- Official filing\n- Expert engagement contract"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Concrete checks that prove the work is complete.
+      placeholder: "- [ ] User can complete the new flow\n- [ ] API validates required fields\n- [ ] Tests cover success and failure paths"
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: Commands, browser checks, or artifacts expected before merge.
+      placeholder: "- [ ] npm run verify:ci\n- [ ] Browser check on mobile viewport"
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Notes
+      description: Known risks, data assumptions, compliance boundaries, or follow-ups.
+    validations:
+      required: false

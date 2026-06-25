@@ -1,0 +1,257 @@
+[
+  {
+    "id": "expert_aoi_gyosei",
+    "name": "あおい行政書士法人",
+    "category": "行政書士法人",
+    "serviceArea": "全国対応",
+    "locations": [
+      "東京",
+      "名古屋",
+      "大阪"
+    ],
+    "websiteUrl": "https://aoi-gyosei.example/business-subsidy/",
+    "sourceUrl": "https://aoi-gyosei.example/business-subsidy/",
+    "sourceSummary": "（開発用ダミー）事業系補助金の申請支援ページで、補助金選定から計画・調査、申請準備までの伴走型支援を案内している想定の架空事務所。",
+    "programFocus": [
+      "round_digital_ai_normal_2026",
+      "round_monozukuri_2026",
+      "round_shoryokuka_ippan_2026",
+      "round_jizokuka_2026",
+      "it-digital-ai-2026-normal-3",
+      "monodukuri-23",
+      "shoryokuka-ippan-7",
+      "jizokuka-normal-20"
+    ],
+    "strengthKeywords": [
+      "IT",
+      "AI",
+      "業務自動化",
+      "省力化",
+      "設備投資",
+      "販路開拓",
+      "新製品"
+    ],
+    "consultationMode": [
+      "online",
+      "in_person"
+    ],
+    "fitNotes": [
+      "複数の事業系補助金に対応する想定のため、幅広い候補の初回相談先にしやすい。",
+      "全国対応の案内があり、地域を問わず候補として提示できる。"
+    ],
+    "caveats": [
+      "実際の受任可否、報酬、対応範囲は問い合わせで確認が必要です。",
+      "申請者本人による内容確認が前提です。"
+    ],
+    "lastSeenAt": "2026-06-20T00:00:00+09:00",
+    "verificationLevel": "official_site"
+  },
+  {
+    "id": "expert_hikari_gyosei",
+    "name": "ひかり行政書士法人",
+    "category": "行政書士法人",
+    "serviceArea": "全国対応",
+    "locations": [
+      "大阪"
+    ],
+    "websiteUrl": "https://hikari-gyosei.example/",
+    "sourceUrl": "https://hikari-gyosei.example/",
+    "sourceSummary": "（開発用ダミー）デジタル化・AI導入補助金とIT導入支援事業者向けの申請サポートを案内している想定の架空事務所。",
+    "programFocus": [
+      "round_digital_ai_normal_2026",
+      "it-digital-ai-2026-normal-3"
+    ],
+    "strengthKeywords": [
+      "IT",
+      "AI",
+      "デジタル",
+      "業務自動化",
+      "ソフトウェア"
+    ],
+    "consultationMode": [
+      "online"
+    ],
+    "fitNotes": [
+      "IT導入・デジタル化・AI導入系の候補に特化して提示しやすい。",
+      "ITツールやベンダー選定が絡む案件の確認先に向く。"
+    ],
+    "caveats": [
+      "対象がITベンダー・支援事業者寄りの場合があるため、申請者として依頼できる範囲を確認してください。",
+      "採択実績は将来の採択を保証するものではありません。"
+    ],
+    "lastSeenAt": "2026-06-20T00:00:00+09:00",
+    "verificationLevel": "official_site"
+  },
+  {
+    "id": "expert_sakura_gyosei",
+    "name": "補助金サポートセンター（さくら行政書士法人）",
+    "category": "行政書士法人",
+    "serviceArea": "オンライン相談",
+    "locations": [
+      "東京"
+    ],
+    "websiteUrl": "https://sakura-hojokin.example/support/",
+    "sourceUrl": "https://sakura-hojokin.example/support/",
+    "sourceSummary": "（開発用ダミー）企業向け補助金申請について、補助金申請専門の行政書士とオンライン相談できるサービスを案内している想定の架空事務所。",
+    "programFocus": [
+      "round_digital_ai_normal_2026",
+      "round_monozukuri_2026",
+      "round_jizokuka_2026",
+      "it-digital-ai-2026-normal-3",
+      "monodukuri-23",
+      "jizokuka-normal-20"
+    ],
+    "strengthKeywords": [
+      "IT",
+      "販路開拓",
+      "設備投資",
+      "小規模事業者",
+      "オンライン"
+    ],
+    "consultationMode": [
+      "online"
+    ],
+    "fitNotes": [
+      "オンライン相談を前提にした導線があり、遠隔で初回相談したいユーザーに提示しやすい。",
+      "IT導入補助金、ものづくり補助金、小規模事業者持続化補助金の相談事例がある想定。"
+    ],
+    "caveats": [
+      "報酬、担当者、対応可否は問い合わせで確認が必要です。",
+      "本サービス上では紹介候補の提示のみで、受任契約は各専門家と直接確認してください。"
+    ],
+    "lastSeenAt": "2026-06-20T00:00:00+09:00",
+    "verificationLevel": "official_site"
+  },
+  {
+    "id": "expert_midori_gyosei",
+    "name": "行政書士法人みどり",
+    "category": "行政書士法人",
+    "serviceArea": "全国対応",
+    "locations": [
+      "東京"
+    ],
+    "websiteUrl": "https://midori-gyosei.example/",
+    "sourceUrl": "https://midori-gyosei.example/",
+    "sourceSummary": "（開発用ダミー）補助金・助成金の申請フルサポート、検索サービス、創業融資サポート等を案内している想定の架空事務所。",
+    "programFocus": [
+      "round_digital_ai_normal_2026",
+      "round_monozukuri_2026",
+      "round_jizokuka_2026",
+      "round_shoryokuka_ippan_2026",
+      "round_shokei_ma_2026",
+      "it-digital-ai-2026-normal-3",
+      "monodukuri-23",
+      "jizokuka-normal-20",
+      "shoryokuka-ippan-7",
+      "shoukei-ma-15"
+    ],
+    "strengthKeywords": [
+      "補助金",
+      "助成金",
+      "資金調達",
+      "創業",
+      "新事業",
+      "事業承継"
+    ],
+    "consultationMode": [
+      "online",
+      "in_person"
+    ],
+    "fitNotes": [
+      "資金調達・補助金・創業支援をまとめて相談したい会社の候補になる。",
+      "事業承継や新事業を含む幅広い経営支援文脈で提示しやすい。"
+    ],
+    "caveats": [
+      "具体的な補助金別の受任条件は問い合わせで確認が必要です。",
+      "補助金の採択可否を保証するものではありません。"
+    ],
+    "lastSeenAt": "2026-06-20T00:00:00+09:00",
+    "verificationLevel": "official_site"
+  },
+  {
+    "id": "expert_kaede_gyosei",
+    "name": "かえで行政書士法人",
+    "category": "行政書士法人",
+    "serviceArea": "全国対応",
+    "locations": [
+      "札幌",
+      "東京",
+      "大阪",
+      "福岡"
+    ],
+    "websiteUrl": "https://kaede-gyosei.example/business_guide/",
+    "sourceUrl": "https://kaede-gyosei.example/business_guide/",
+    "sourceSummary": "（開発用ダミー）事業承継・M&A補助金を含む助成金・補助金相談の案内ページで、問い合わせ導線と専門チームによる相談受付を案内している想定の架空事務所。",
+    "programFocus": [
+      "round_shokei_ma_2026",
+      "shoukei-ma-15"
+    ],
+    "strengthKeywords": [
+      "事業承継",
+      "M&A",
+      "PMI",
+      "後継者",
+      "設備投資",
+      "資金調達"
+    ],
+    "consultationMode": [
+      "online",
+      "in_person"
+    ],
+    "fitNotes": [
+      "事業承継・M&A補助金の相談ページがある想定で、承継・M&A系の候補として提示しやすい。",
+      "全国対応の士業グループとして複数地域から相談しやすい候補です。"
+    ],
+    "caveats": [
+      "具体的な担当範囲、報酬、受任可否は問い合わせで確認が必要です。",
+      "公開ページの情報は候補提示のための参考であり、申請者本人による確認が前提です。"
+    ],
+    "lastSeenAt": "2026-06-20T00:00:00+09:00",
+    "verificationLevel": "official_site"
+  },
+  {
+    "id": "expert_tsubasa_gyosei",
+    "name": "つばさ行政書士法人（補助金ナビ）",
+    "category": "行政書士法人",
+    "serviceArea": "全国対応",
+    "locations": [
+      "名古屋",
+      "東京",
+      "大阪"
+    ],
+    "websiteUrl": "https://tsubasa-hojokin.example/",
+    "sourceUrl": "https://tsubasa-hojokin.example/",
+    "sourceSummary": "（開発用ダミー）ものづくり補助金等の公的補助金、設備投資、事業計画書作成支援を案内している想定の架空事務所。",
+    "programFocus": [
+      "round_monozukuri_2026",
+      "round_shoryokuka_ippan_2026",
+      "round_shokei_ma_2026",
+      "monodukuri-23",
+      "shoryokuka-ippan-7",
+      "shoukei-ma-15"
+    ],
+    "strengthKeywords": [
+      "ものづくり",
+      "金属加工",
+      "3Dプリント",
+      "試作",
+      "設備投資",
+      "省力化",
+      "事業承継"
+    ],
+    "consultationMode": [
+      "online",
+      "in_person"
+    ],
+    "fitNotes": [
+      "ものづくり補助金や設備投資系の相談先として相性が良い。",
+      "製造・試作・設備導入の計画を深掘りしたい会社に提示しやすい。"
+    ],
+    "caveats": [
+      "補助金ごとの募集状況と対応可否は問い合わせで確認が必要です。",
+      "認定支援機関要件がある制度では、必要な役割分担を別途確認してください。"
+    ],
+    "lastSeenAt": "2026-06-20T00:00:00+09:00",
+    "verificationLevel": "official_site"
+  }
+]

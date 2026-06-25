@@ -1,0 +1,7 @@
+/* =========================================================
+   補助金ポケット — Webfont
+   The brand is system-first (Apple/Hiragino on iOS). Noto Sans JP is
+   loaded as the cross-platform fallback so Japanese text renders
+   consistently on Android, Windows and in previews.
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap");

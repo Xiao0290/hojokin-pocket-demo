@@ -1,0 +1,118 @@
+<!-- @dsCard group="Motion" viewport="720x540" name="Living AI — 診断セレモニー" subtitle="呼吸する核 → 凝集 → 開花 → 逐字ストリーミング揭示 (reduced-motion 対応)" -->
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../tokens/colors.css">
+<link rel="stylesheet" href="../tokens/typography.css">
+<link rel="stylesheet" href="../tokens/spacing.css">
+<style>
+  body { margin: 0; font-family: var(--font); background: var(--surface); color: var(--ink); }
+  .wrap { display: grid; grid-template-columns: 300px 1fr; gap: 28px; padding: 24px; align-items: start; }
+  .phone { position: relative; width: 280px; height: 460px; background: #fff; border-radius: 28px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-float); }
+  .phone canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; }
+  .scr { position: absolute; inset: 0; padding: 16px; }
+  .ttl { text-align: center; font-size: 15px; font-weight: 700; padding: 6px 0 0; }
+  .gap { height: 150px; }
+  .ct { text-align: center; }
+  .ct .h { font-size: 18px; font-weight: 700; }
+  .ct .u { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+  .big { font-size: 38px; font-weight: 800; letter-spacing: -1px; }
+  .sum { font-size: 13px; color: var(--gray-500); font-weight: 700; }
+  .row { padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+  .row .n { font-size: 16px; font-weight: 700; }
+  .row .m { font-size: 12px; color: var(--gray-700); margin-top: 4px; }
+  .lbl { font-size: 12px; color: var(--gray-500); font-weight: 700; }
+  .caret { display: inline-block; width: 2px; height: 14px; background: var(--blue-500); margin-left: 1px; vertical-align: -2px; animation: bk .8s step-end infinite; }
+  @keyframes bk { 50% { opacity: 0; } }
+  .legend { font-size: 14px; line-height: 1.7; }
+  .legend h3 { font-size: 13px; color: var(--gray-500); font-weight: 700; margin: 0 0 8px; }
+  .legend .step { display: flex; gap: 10px; margin-bottom: 10px; }
+  .legend .step b { color: var(--blue-600); min-width: 88px; font-weight: 700; }
+  .tok { font-family: var(--font); font-size: 12px; color: var(--gray-700); background: var(--surface-subtle); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin-top: 12px; }
+  .ctrl { margin-top: 12px; display: flex; gap: 8px; align-items: center; }
+  .ctrl button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); background: #fff; color: var(--blue-600); cursor: pointer; }
+  .ctrl label { font-size: 13px; color: var(--gray-500); display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="phone" id="phone">
+    <canvas id="cv"></canvas>
+    <div class="scr" id="diag">
+      <div class="ttl">診断中</div>
+      <div class="gap"></div>
+      <div class="ct"><div class="h">会社情報を解析しています</div><div class="u">sample-corp.example</div></div>
+    </div>
+    <div class="scr" id="res" style="display:none">
+      <div class="ttl">診断結果</div>
+      <div class="lbl" id="rlabel"></div>
+      <div style="display:flex;align-items:baseline;gap:10px;margin:6px 0 8px"><span class="big" id="rbig">0件</span><span class="sum">上限合計 <span id="rsum">¥0</span></span></div>
+      <div class="row"><div class="n" id="n1"></div><div class="m">上限 <b id="l1">¥0</b>　残<span id="d1">0</span>日</div></div>
+      <div class="row"><div class="n" id="n2"></div><div class="m">上限 <b id="l2">¥0</b>　残<span id="d2">0</span>日</div></div>
+    </div>
+  </div>
+  <div>
+    <div class="legend">
+      <h3>モーション言語（4段）</h3>
+      <div class="step"><b>ambient</b><span>常時の淡い粒子。AIが動いている生命感を全画面で示す。</span></div>
+      <div class="step"><b>breathing</b><span>AI待機中、核が呼吸＋微心拍。結果への期待を作る。</span></div>
+      <div class="step"><b>converge → bloom</b><span>完了直前に粒子が核へ凝集し、開花して結果を「届ける」。</span></div>
+      <div class="step"><b>streaming</b><span>結果を一文字ずつ揭示＋数値カウントアップ。</span></div>
+    </div>
+    <div class="tok">
+      tokens: <b>--blue-500 #1a56f0</b> 単色 / 呼吸 ~3.4s / 開花 ~1.1s / streaming 42cps<br>
+      a11y: prefers-reduced-motion → 全アニメ停止・即時表示 / 粒子数キャップ・単一rAF
+    </div>
+    <div class="ctrl">
+      <button id="replay">▶ もう一度</button>
+      <label><input type="checkbox" id="reduce"> 動きを抑える</label>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var cv=document.getElementById('cv'),ctx=cv.getContext('2d'),BLUE='26,86,240';
+  var diag=document.getElementById('diag'),res=document.getElementById('res');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('reduce').checked=reduce;
+  var W=280,H=460,DPR=Math.min(2,window.devicePixelRatio||1);cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
+  var core={x:W/2,y:170},N=60,P=[],rings=[];
+  function seed(a){for(var i=0;i<N;i++){var p=P[i]||(P[i]={});p.x=Math.random()*W;p.y=Math.random()*H;p.vx=(Math.random()-.5)*(a?.2:.3);p.vy=(Math.random()-.5)*(a?.2:.3);p.r=Math.random()*1.5+.7;p.ph=Math.random()*6.28;p.life=1;}}
+  seed(false);
+  var DIAG=2600,CONV=700,BLOOM=1000,HOLD=3200,T0=0,bloomed=false,seeded=false,rev=0;
+  var DATA=[{n:'事業再構築補助金',l:30000000,d:62},{n:'ものづくり補助金',l:10000000,d:48}];
+  function ease(t){return 1-Math.pow(1-t,3);}
+  function clamp(t){return Math.max(0,Math.min(1,t));}
+  function start(){T0=performance.now();bloomed=false;seeded=false;rings=[];seed(false);res.style.display='none';diag.style.display='block';
+    document.getElementById('rlabel').textContent='';document.getElementById('rbig').textContent='0件';document.getElementById('rsum').textContent='¥0';
+    [1,2].forEach(function(i){document.getElementById('n'+i).innerHTML='';document.getElementById('l'+i).textContent='¥0';document.getElementById('d'+i).textContent='0';});
+    if(reduce)stat();}
+  function stat(){diag.style.display='none';res.style.display='block';document.getElementById('rlabel').textContent='申請できる補助金';document.getElementById('rbig').textContent='6件';document.getElementById('rsum').textContent='¥40,000,000';
+    [1,2].forEach(function(i){document.getElementById('n'+i).textContent=DATA[i-1].n;document.getElementById('l'+i).textContent='¥'+DATA[i-1].l.toLocaleString('en-US');document.getElementById('d'+i).textContent=DATA[i-1].d;});ctx.clearRect(0,0,W,H);}
+  function type(el,txt,t){var n=Math.floor(clamp(t)*txt.length);if(n>=txt.length){el.textContent=txt;}else{el.innerHTML='';el.appendChild(document.createTextNode(txt.slice(0,n)));var c=document.createElement('span');c.className='caret';el.appendChild(c);}}
+  function cnt(el,to,t,f){var v=ease(clamp(t))*to;el.textContent=f==='y'?'¥'+Math.round(v).toLocaleString('en-US'):f==='k'?Math.round(v)+'件':String(Math.round(v));}
+  function reveal(r){var seg=function(s,d){return (r-s)/d;};
+    type(document.getElementById('rlabel'),'申請できる補助金',seg(0,360));
+    cnt(document.getElementById('rbig'),6,seg(250,1000),'k');cnt(document.getElementById('rsum'),40000000,seg(250,1100),'y');
+    [0,1].forEach(function(i){var b=700+i*900;type(document.getElementById('n'+(i+1)),DATA[i].n,seg(b,440));cnt(document.getElementById('l'+(i+1)),DATA[i].l,seg(b+460,540),'y');cnt(document.getElementById('d'+(i+1)),DATA[i].d,seg(b+460,540),'p');});}
+  function frame(now){requestAnimationFrame(frame);if(reduce)return;var el=now-T0;ctx.clearRect(0,0,W,H);
+    var br=(Math.sin(now/1700)+1)/2,hp=(now%3400)/3400,hb=hp<0.12?Math.sin(hp/0.12*Math.PI):(hp>0.18&&hp<0.3?0.6*Math.sin((hp-0.18)/0.12*Math.PI):0);
+    var ph=el<DIAG?'d':el<DIAG+CONV?'c':el<DIAG+CONV+BLOOM?'b':'r';
+    if(ph==='b'&&!bloomed){bloomed=true;rev=now;diag.style.display='none';res.style.display='block';for(var i=0;i<N;i++){var p=P[i];var a=Math.atan2(p.y-core.y,p.x-core.x)+(Math.random()-.5)*.6,s=3+Math.random()*5.5;p.vx=Math.cos(a)*s;p.vy=Math.sin(a)*s;p.life=1;}rings.push({t:now,m:300},{t:now+90,m:220});}
+    if(bloomed)reveal(now-rev);
+    if(ph==='r'&&!seeded){seeded=true;seed(true);}
+    for(var i=0;i<N;i++){var p=P[i];
+      if(ph==='d'){var dx=core.x-p.x,dy=core.y-p.y,d=Math.sqrt(dx*dx+dy*dy)+.001,pl=0.045*(1-Math.min(1,d/240));p.vx+=dx/d*pl-dy/d*0.018;p.vy+=dy/d*pl+dx/d*0.018;p.vx*=0.96;p.vy*=0.96;p.x+=p.vx+Math.sin(now/2600+p.ph)*0.12;p.y+=p.vy+Math.cos(now/3000+p.ph)*0.12;}
+      else if(ph==='c'){var cx=core.x-p.x,cy=core.y-p.y,cd=Math.sqrt(cx*cx+cy*cy)+.001;p.vx+=cx/cd*0.22;p.vy+=cy/cd*0.22;p.vx*=0.86;p.vy*=0.86;p.x+=p.vx;p.y+=p.vy;}
+      else if(ph==='b'){p.x+=p.vx;p.y+=p.vy;p.vx*=0.95;p.vy*=0.95;p.life-=0.018;}
+      else{p.x+=p.vx+Math.sin(now/2600+p.ph)*0.1;p.y+=p.vy+Math.cos(now/3000+p.ph)*0.1;if(p.x<-4)p.x=W+4;if(p.x>W+4)p.x=-4;if(p.y<-4)p.y=H+4;if(p.y>H+4)p.y=-4;}
+      var tw=(Math.sin(now/900+p.ph)+1)/2,inten=ph==='c'?1.1:ph==='r'?0.4:1,a=(0.1+tw*0.22)*inten*(0.6+br*0.4);if(ph==='b')a=Math.max(0,p.life)*0.5;if(a<=0)continue;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.2832);ctx.fillStyle='rgba('+BLUE+','+a.toFixed(3)+')';ctx.fill();}
+    if(ph==='d'||ph==='c'){var g=ph==='c'?(el-DIAG)/CONV:0,R=34+br*14+hb*9+g*8,ca=0.22+br*0.16+hb*0.16+g*0.2;var gr=ctx.createRadialGradient(core.x,core.y,2,core.x,core.y,R);gr.addColorStop(0,'rgba('+BLUE+','+Math.min(.8,ca).toFixed(3)+')');gr.addColorStop(.55,'rgba('+BLUE+','+(ca*0.35).toFixed(3)+')');gr.addColorStop(1,'rgba('+BLUE+',0)');ctx.beginPath();ctx.arc(core.x,core.y,R,0,6.2832);ctx.fillStyle=gr;ctx.fill();}
+    for(var k=0;k<rings.length;k++){var rg=rings[k],rt=(now-rg.t)/700;if(rt<0||rt>1)continue;ctx.beginPath();ctx.arc(core.x,core.y,ease(rt)*rg.m,0,6.2832);ctx.strokeStyle='rgba('+BLUE+','+((1-rt)*0.45).toFixed(3)+')';ctx.lineWidth=2.5*(1-rt)+0.5;ctx.stroke();}
+    if(el>DIAG+CONV+BLOOM+HOLD)start();}
+  document.getElementById('replay').addEventListener('click',function(){reduce=false;document.getElementById('reduce').checked=false;start();});
+  document.getElementById('reduce').addEventListener('change',function(e){reduce=e.target.checked;start();});
+  start();requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

@@ -1,0 +1,53 @@
+/* =========================================================
+   補助金ポケット — Color tokens
+   Brand blue ramp + neutrals + semantic.  Single source of truth.
+   ========================================================= */
+:root {
+  /* ===== Brand / Blue ramp ===== */
+  --blue-50:  #eef3ff;
+  --blue-100: #dde7ff;
+  --blue-200: #b9cdfd;
+  --blue-400: #4f7bf5;
+  --blue-500: #1a56f0;   /* primary action */
+  --blue-600: #1546c8;   /* pressed */
+  --blue-700: #10369c;
+
+  /* ===== Neutral / Ink ===== */
+  --ink:       #1a1a1a;  /* headings / strong body */
+  --ink-2:     #2a2a2a;  /* body */
+  --gray-700:  #4a4a4f;  /* supporting body */
+  --gray-500:  #8a8a8e;  /* secondary / labels */
+  --gray-400:  #a8a8ad;  /* placeholder / disabled text */
+  --gray-300:  #cfcfd6;  /* disabled fills / check borders */
+  --line:      #e6e6ea;  /* standard hairline */
+  --line-soft: #efeff2;  /* faint hairline */
+
+  /* ===== Surfaces ===== */
+  --surface:           #ffffff;  /* cards, sheets */
+  --surface-subtle:    #f7f8fa;  /* page wash, them-bubble */
+  --surface-highlight: #eef3ff;  /* selected / emphasised card */
+  --canvas:            #d9dce3;  /* outside-the-device backdrop */
+
+  /* ===== Semantic ===== */
+  --success:    #15a673;  --success-bg: #e7f7f0;
+  --warning:    #e0900f;  --warning-bg: #fdf3e1;
+  --danger:     #e5484d;  --danger-bg:  #fdecec;
+  --info:       #1a56f0;  --info-bg:    #eef3ff;
+
+  /* ===== Semantic aliases (consumed by components) ===== */
+  --text-strong:    var(--ink);
+  --text-body:      var(--ink-2);
+  --text-secondary: var(--gray-500);
+  --text-muted:     var(--gray-400);
+  --text-link:      var(--blue-500);
+  --text-on-brand:  #ffffff;
+
+  --brand:          var(--blue-500);
+  --brand-press:    var(--blue-600);
+  --brand-tint:     var(--blue-50);
+
+  --surface-card:   var(--surface);
+  --border-default: var(--line);
+  --border-soft:    var(--line-soft);
+  --border-brand:   var(--blue-500);
+}

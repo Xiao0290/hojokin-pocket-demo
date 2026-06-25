@@ -1,0 +1,52 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Data — AnimatedNumber" subtitle="Count-up & slot-machine figures: counts, yen, %, ratings" -->
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font); background: #fff; color: var(--ink); }
+  .stage { padding: 24px; display: flex; flex-direction: column; gap: 18px; max-width: 460px; }
+  .lbl { font-size: 12px; color: var(--gray-500); font-weight: 600; }
+  .row { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  .big { font-size: 40px; font-weight: 800; letter-spacing: -1px; color: var(--ink); }
+  .blue { color: var(--blue-500); }
+  .replay { align-self: flex-start; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body><div id="root" class="stage"></div>
+<script type="text/babel">
+  const { AnimatedNumber, Button } = window.DesignSystem_a96fc8
+  function Demo() {
+    const [k, setK] = React.useState(0)
+    return (
+      <>
+        <div className="lbl">count-up — hero count / sum</div>
+        <div className="row" key={k}>
+          <span className="big"><AnimatedNumber value={8} suffix="件" /></span>
+          <span className="big blue"><AnimatedNumber value={48300000} format="yen" /></span>
+        </div>
+        <div className="lbl">count-up — percent · rating · delta</div>
+        <div className="row" key={'b'+k} style={{ fontSize: 24, fontWeight: 700 }}>
+          <span><AnimatedNumber value={68} format="percent" /></span>
+          <span className="blue"><AnimatedNumber value={89} format="percent" /></span>
+          <span><AnimatedNumber value={4.9} decimals={1} /></span>
+          <span className="blue"><AnimatedNumber value={21} prefix="+" suffix="pt" /></span>
+          <span><AnimatedNumber value={62} suffix="日" /></span>
+        </div>
+        <div className="lbl">variant="slot" — slot-machine reels</div>
+        <div className="row" key={'s'+k}>
+          <span className="big"><AnimatedNumber value={8} suffix="件" variant="slot" /></span>
+          <span className="big blue"><AnimatedNumber value={48300000} format="yen" variant="slot" /></span>
+        </div>
+        <div className="replay">
+          <Button size="sm" fullWidth={false} variant="secondary" onClick={() => setK((n) => n + 1)}>もう一度再生</Button>
+        </div>
+      </>
+    )
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />)
+</script>
+</body></html>

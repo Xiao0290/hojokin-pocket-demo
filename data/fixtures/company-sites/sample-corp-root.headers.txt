@@ -1,0 +1,26 @@
+HTTP/2 301
+date: Sat, 20 Jun 2026 03:19:17 GMT
+content-type: text/plain; charset=utf-8
+content-length: 19
+age: 1
+cache-control: public,max-age=0,must-revalidate
+cache-status: "Example Edge"; fwd=miss
+location: /ja/
+server: example-edge
+strict-transport-security: max-age=31536000
+x-request-id: 00000000000000000000000004
+cache-status: DYNAMIC
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200
+date: Sat, 20 Jun 2026 03:19:18 GMT
+content-type: text/html; charset=UTF-8
+age: 1
+cache-control: public,max-age=0,must-revalidate
+cache-status: "Example Edge"; fwd=miss
+server: example-edge
+strict-transport-security: max-age=31536000
+vary: Accept-Encoding
+x-request-id: 00000000000000000000000005
+cache-status: DYNAMIC
+alt-svc: h3=":443"; ma=86400

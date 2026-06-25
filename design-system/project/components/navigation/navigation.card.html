@@ -1,0 +1,36 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Navigation — NavBar / TabBar" subtitle="Top title bar and bottom section tabs" -->
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font); background: var(--surface-subtle); color: var(--ink); }
+  .stage { padding: 24px; display: flex; flex-direction: column; gap: 20px; max-width: 420px; }
+  .lbl { font-size: 12px; color: var(--gray-500); font-weight: 600; margin-bottom: -10px; }
+  .bar { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body><div id="root" class="stage"></div>
+<script type="text/babel">
+  const { NavBar, TabBar } = window.DesignSystem_a96fc8
+  function Demo() {
+    const [tab, setTab] = React.useState('diag')
+    return (
+      <>
+        <div className="lbl">NavBar — brand wordmark</div>
+        <div className="bar"><NavBar brand right="保存" /></div>
+        <div className="lbl">NavBar — back + title</div>
+        <div className="bar"><NavBar title="申請状況" left /></div>
+        <div className="lbl">NavBar — labelled back</div>
+        <div className="bar"><NavBar title="事業再構築補助金" left="結果" /></div>
+        <div className="lbl">TabBar — tap to switch</div>
+        <div className="bar"><TabBar active={tab} onChange={setTab} /></div>
+      </>
+    )
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />)
+</script>
+</body></html>

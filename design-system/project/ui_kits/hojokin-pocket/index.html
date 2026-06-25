@@ -1,0 +1,67 @@
+<!-- @dsCard group="Hojokin Pocket" viewport="460x720" name="補助金ポケット — Mobile app" subtitle="Interactive 12-screen flow: diagnose → AI draft → expert → jGrants" -->
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>補助金ポケット — UI Kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="kit.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="data.js"></script>
+</head>
+<body><div id="root"></div>
+<script type="text/babel" src="screens-diagnose.jsx"></script>
+<script type="text/babel" src="screens-apply.jsx"></script>
+<script type="text/babel" src="screens-expert.jsx"></script>
+<script type="text/babel" src="screens-submit.jsx"></script>
+<script type="text/babel">
+  const DS = window.DesignSystem_a96fc8
+  const K = window.KIT
+  const { useState, useCallback } = React
+
+  const TAB_ROOTS = { diag: 'Home', apply: 'ApplyRoot', msg: 'MsgRoot', mypage: 'MyPage' }
+  const SHOW_TABBAR = new Set(['Home', 'Results', 'ApplyRoot', 'MsgRoot', 'MyPage'])
+
+  function App() {
+    const [tab, setTab] = useState('diag')
+    const [stack, setStack] = useState([])
+    const [app, setApp] = useState({
+      url: '', selectedSubsidy: K.SUBSIDIES[0], selectedExpert: null,
+      hasApplied: false, engaged: false,
+    })
+
+    const set = useCallback((p) => setApp((s) => ({ ...s, ...p })), [])
+    const go = useCallback((screen) => setStack((s) => [...s, screen]), [])
+    const replace = useCallback((screen) => setStack((s) => [...s.slice(0, -1), screen]), [])
+    const back = useCallback(() => setStack((s) => s.slice(0, -1)), [])
+    const home = useCallback(() => { setStack([]); setTab('diag') }, [])
+    const switchTab = useCallback((t) => { setStack([]); setTab(t) }, [])
+
+    // map pushed screen ids -> Screen component keys
+    const SCREEN_KEY = {
+      diagnosing: 'Diagnosing', results: 'Results', detail: 'SubsidyDetail',
+      plan: 'BusinessPlan', method: 'ApplyMethod', expert: 'FindExpert',
+      confirm: 'ConfirmRequest', chat: 'Chat', status: 'ApplyStatus',
+      submit: 'Submit', complete: 'Complete',
+    }
+
+    const nav = { go, back, replace, home, tab: switchTab, set }
+
+    const currentId = stack.length > 0 ? stack[stack.length - 1] : null
+    const compKey = currentId ? SCREEN_KEY[currentId] : TAB_ROOTS[tab]
+    const ScreenComp = K.Screens[compKey]
+    const showTab = (stack.length === 0 && SHOW_TABBAR.has(compKey)) || compKey === 'Results'
+
+    return (
+      <DS.PhoneFrame>
+        <ScreenComp key={compKey + stack.length} nav={nav} app={app} />
+        {showTab && <DS.TabBar active={tab} onChange={switchTab} />}
+      </DS.PhoneFrame>
+    )
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+</script>
+</body></html>

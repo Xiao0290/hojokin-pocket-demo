@@ -1,0 +1,41 @@
+name: Bug report
+description: Defect, regression, or unexpected behavior
+title: "[Bug] "
+labels:
+  - bug
+  - status:ready
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What failed and why does it matter?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction Steps
+      placeholder: "1. Go to ...\n2. Run ...\n3. Observe ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Logs, screenshots, URLs, command output, or affected files.
+    validations:
+      required: false
+  - type: textarea
+    id: verification
+    attributes:
+      label: Fix Verification
+      placeholder: "- [ ] Regression test added\n- [ ] npm run verify:ci"
+    validations:
+      required: true

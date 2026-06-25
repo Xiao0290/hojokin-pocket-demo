@@ -1,0 +1,33 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Radius & elevation" subtitle="Corner radii sm…pill · 3 shadow levels" -->
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font); background: var(--surface-subtle); color: var(--ink); }
+  .wrap { padding: 24px; display: flex; gap: 40px; }
+  .group { display: flex; gap: 16px; align-items: flex-end; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .r { width: 56px; height: 56px; background: #fff; border: 1px solid var(--line); }
+  .e { width: 72px; height: 56px; background: #fff; border-radius: var(--r-lg); }
+  .tok { font-size: 11px; color: var(--gray-500); font-weight: 700; }
+  .hd { font-size: 11px; color: var(--gray-400); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; }
+</style></head>
+<body><div class="wrap">
+  <div>
+    <div class="hd">Radius</div>
+    <div class="group">
+      <div class="item"><div class="r" style="border-radius:var(--r-sm)"></div><div class="tok">sm 8</div></div>
+      <div class="item"><div class="r" style="border-radius:var(--r-md)"></div><div class="tok">md 12</div></div>
+      <div class="item"><div class="r" style="border-radius:var(--r-lg)"></div><div class="tok">lg 14</div></div>
+      <div class="item"><div class="r" style="border-radius:var(--r-pill)"></div><div class="tok">pill</div></div>
+    </div>
+  </div>
+  <div>
+    <div class="hd">Elevation</div>
+    <div class="group">
+      <div class="item"><div class="e" style="box-shadow:var(--shadow-sm)"></div><div class="tok">sm</div></div>
+      <div class="item"><div class="e" style="box-shadow:var(--shadow-card)"></div><div class="tok">card</div></div>
+      <div class="item"><div class="e" style="box-shadow:var(--shadow-float)"></div><div class="tok">float</div></div>
+    </div>
+  </div>
+</div></body></html>

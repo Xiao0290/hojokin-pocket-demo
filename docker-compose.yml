@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: hojokin-pocket-postgres
+    ports:
+      - "54329:5432"
+    environment:
+      POSTGRES_DB: hojokin_pocket
+      POSTGRES_USER: hojokin
+      POSTGRES_PASSWORD: hojokin_local_only
+    volumes:
+      - hojokin-pocket-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hojokin -d hojokin_pocket"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  hojokin-pocket-postgres:

@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-06-20",
+  "record_count": 33,
+  "source_count": 22,
+  "review_task_count": 84,
+  "eligibility_sample_count": 9,
+  "files": {
+    "source_registry.json": {
+      "bytes": 11151,
+      "sha256": "8dbc39d53a7c1f915ff69ebd895c4b0340288dba70ac4500abe932e6356b2fbf"
+    },
+    "subsidy_seed_dataset.jsonl": {
+      "bytes": 69916,
+      "sha256": "fb828115c04870e0d1280563a58ecf0fc625d7191f9337768bb0aef3183bb438"
+    },
+    "subsidy_seed_dataset_pretty.json": {
+      "bytes": 88435,
+      "sha256": "e171a76043c8318d4fa6cbefc0ee1a2efe10b78c17bde55f3dd90cfd9922632f"
+    },
+    "eligibility_rule_samples.json": {
+      "bytes": 20031,
+      "sha256": "bb1c36598cba47f6b05876f6a6c1d73dad9e30db502a3cc0edec1ad6cf46dbfd"
+    },
+    "review_queue.csv": {
+      "bytes": 20950,
+      "sha256": "d4a9415ec7eb969f24b69d8089d28fecadcc751219c0ee53e0f6ce33fe78c3a1"
+    },
+    "license_matrix.csv": {
+      "bytes": 8440,
+      "sha256": "ca06f422afc1e87c9d108f22e820ad76d8790c3a8d5b29ebfe29fbedcd6f0d3e"
+    },
+    "human_review_import.csv": {
+      "bytes": 28210,
+      "sha256": "60853d93f3f3c5e4ae17f30d469715eb76db784747c1b392c225e3073602118a"
+    },
+    "README.md": {
+      "bytes": 2079,
+      "sha256": "f5f27bdc419109ff8100e728192ce5d747370739a67262beb0f8ea8f18e23567"
+    },
+    "etl_pr_plan.md": {
+      "bytes": 3525,
+      "sha256": "02a20905c9b157ce73b00f354babe1c8312ae117f552e40963d2a63304c1ede4"
+    }
+  }
+}

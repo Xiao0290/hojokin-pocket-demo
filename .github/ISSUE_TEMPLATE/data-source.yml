@@ -1,0 +1,50 @@
+name: Data or source work
+description: Subsidy, company, expert, or source-refresh data work
+title: "[Data] "
+labels:
+  - type:data
+  - status:ready
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What data outcome should this issue deliver?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Official pages, PDFs, or local fixtures involved.
+      placeholder: "- Official URL:\n- Local fixture:"
+    validations:
+      required: true
+  - type: textarea
+    id: data_contract
+    attributes:
+      label: Data Contract Impact
+      description: Fields added, changed, deprecated, or revalidated.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: "- [ ] Official source URL is recorded\n- [ ] lastSeenAt is updated\n- [ ] Tests cover the changed fixture"
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      placeholder: "- [ ] npm run test\n- [ ] npm run score:multidim"
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Notes
+      description: Source ambiguity, stale dates, or manual re-check requirements.
+    validations:
+      required: false

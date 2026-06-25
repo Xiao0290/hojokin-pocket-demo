@@ -1,0 +1,85 @@
+﻿task_id,priority,source_id,program_name,round_name,field_name,current_value,extracted_value,source_url,source_quote,confidence,review_reason,review_status,assigned_to,review_notes
+RQ-0001,P1,jizokuka_normal_official,小規模事業者持続化補助金＜一般型 通常枠＞,第20回公募,exact_special_cap_conditions,,unknown,https://official.jizokukanb.com/shinsei,,medium,manual_review_required,open,,
+RQ-0002,P1,jizokuka_normal_official,小規模事業者持続化補助金＜一般型 通常枠＞,第20回公募,full_eligible_expense_details,,unknown,https://official.jizokukanb.com/shinsei,,medium,manual_review_required,open,,
+RQ-0003,P1,jizokuka_normal_official,小規模事業者持続化補助金＜一般型 通常枠＞,第20回公募,license_status,yellow,yellow,https://official.jizokukanb.com/shinsei,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0004,P0,jizokuka_sogyo_official,小規模事業者持続化補助金＜創業型＞,第4回公募,max_amount_yen,,unknown,https://r6.jizokukahojokin.info/sogyo/,,medium,missing_critical_field,open,,
+RQ-0005,P0,jizokuka_sogyo_official,小規模事業者持続化補助金＜創業型＞,第4回公募,subsidy_rate,,unknown,https://r6.jizokukahojokin.info/sogyo/,,medium,missing_critical_field,open,,
+RQ-0006,P1,jizokuka_sogyo_official,小規模事業者持続化補助金＜創業型＞,第4回公募,exact_expense_categories,,unknown,https://r6.jizokukahojokin.info/sogyo/,,medium,manual_review_required,open,,
+RQ-0007,P1,jizokuka_sogyo_official,小規模事業者持続化補助金＜創業型＞,第4回公募,license_status,yellow,yellow,https://r6.jizokukahojokin.info/sogyo/,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0008,P0,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：製品・サービス高付加価値化枠,max_amount_yen,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,missing_critical_field,open,,
+RQ-0009,P0,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：製品・サービス高付加価値化枠,subsidy_rate,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,missing_critical_field,open,,
+RQ-0010,P1,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：製品・サービス高付加価値化枠,wage_requirements_by_frame,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,manual_review_required,open,,
+RQ-0011,P1,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：製品・サービス高付加価値化枠,license_status,yellow,yellow,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0012,P0,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：グローバル枠,max_amount_yen,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,missing_critical_field,open,,
+RQ-0013,P0,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：グローバル枠,subsidy_rate,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,missing_critical_field,open,,
+RQ-0014,P1,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：グローバル枠,global_frame_specific_requirements,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,manual_review_required,open,,
+RQ-0015,P1,monodukuri_official,ものづくり・商業・サービス生産性向上促進補助金,第23次締切：グローバル枠,license_status,yellow,yellow,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260206001.html,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0016,P1,it_shien_official,デジタル化・AI導入補助金2026,通常枠 3次締切分,tool_category_eligibility_detail,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/normal/,,high,manual_review_required,open,,
+RQ-0017,P1,it_shien_official,デジタル化・AI導入補助金2026,通常枠 3次締切分,license_status,yellow,yellow,https://it-shien.smrj.go.jp/applicant/subsidy/normal/,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0018,P0,it_shien_official,デジタル化・AI導入補助金2026,インボイス対応類型 3次締切分,max_amount_yen,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,missing_critical_field,open,,
+RQ-0019,P0,it_shien_official,デジタル化・AI導入補助金2026,インボイス対応類型 3次締切分,subsidy_rate,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,missing_critical_field,open,,
+RQ-0020,P1,it_shien_official,デジタル化・AI導入補助金2026,インボイス対応類型 3次締切分,eligible_tool_detail,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,manual_review_required,open,,
+RQ-0021,P1,it_shien_official,デジタル化・AI導入補助金2026,インボイス対応類型 3次締切分,license_status,yellow,yellow,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0022,P0,it_shien_official,デジタル化・AI導入補助金2026,セキュリティ対策推進枠 3次締切分,max_amount_yen,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,missing_critical_field,open,,
+RQ-0023,P0,it_shien_official,デジタル化・AI導入補助金2026,セキュリティ対策推進枠 3次締切分,subsidy_rate,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,missing_critical_field,open,,
+RQ-0024,P1,it_shien_official,デジタル化・AI導入補助金2026,セキュリティ対策推進枠 3次締切分,security_service_requirements,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,manual_review_required,open,,
+RQ-0025,P1,it_shien_official,デジタル化・AI導入補助金2026,セキュリティ対策推進枠 3次締切分,license_status,yellow,yellow,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0026,P0,it_shien_official,デジタル化・AI導入補助金2026,複数社連携IT導入枠 2次締切分,max_amount_yen,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,missing_critical_field,open,,
+RQ-0027,P0,it_shien_official,デジタル化・AI導入補助金2026,複数社連携IT導入枠 2次締切分,subsidy_rate,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,missing_critical_field,open,,
+RQ-0028,P1,it_shien_official,デジタル化・AI導入補助金2026,複数社連携IT導入枠 2次締切分,consortium_requirements,,unknown,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,manual_review_required,open,,
+RQ-0029,P1,it_shien_official,デジタル化・AI導入補助金2026,複数社連携IT導入枠 2次締切分,license_status,yellow,yellow,https://it-shien.smrj.go.jp/applicant/subsidy/schedule/,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0030,P1,shoryokuka_general_official,中小企業省力化投資補助金,一般型 第7回公募,exact_application_start,,unknown,https://shoryokuka.smrj.go.jp/ippan/,,medium,manual_review_required,open,,
+RQ-0031,P1,shoryokuka_general_official,中小企業省力化投資補助金,一般型 第7回公募,exact_application_end,,unknown,https://shoryokuka.smrj.go.jp/ippan/,,medium,manual_review_required,open,,
+RQ-0032,P1,shoryokuka_general_official,中小企業省力化投資補助金,一般型 第7回公募,employee_count_cap_mapping_review,,unknown,https://shoryokuka.smrj.go.jp/ippan/,,medium,manual_review_required,open,,
+RQ-0033,P1,shoryokuka_general_official,中小企業省力化投資補助金,一般型 第7回公募,license_status,yellow,yellow,https://shoryokuka.smrj.go.jp/ippan/,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0034,P1,shinjigyo_official,中小企業新事業進出補助金,第4回公募,official_detail_page_url_review,,unknown,https://shinjigyo-shinshutsu.smrj.go.jp/,,medium,manual_review_required,open,,
+RQ-0035,P1,shinjigyo_official,中小企業新事業進出補助金,第4回公募,license_status,yellow,yellow,https://shinjigyo-shinshutsu.smrj.go.jp/,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0036,P1,shoukei_ma_official,事業承継・M&A補助金,十五次公募,max_amount_yen_by_frame,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260522001.html,,medium,manual_review_required,open,,
+RQ-0037,P1,shoukei_ma_official,事業承継・M&A補助金,十五次公募,subsidy_rate_by_frame,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260522001.html,,medium,manual_review_required,open,,
+RQ-0038,P1,shoukei_ma_official,事業承継・M&A補助金,十五次公募,frame_specific_requirements,,unknown,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260522001.html,,medium,manual_review_required,open,,
+RQ-0039,P1,shoukei_ma_official,事業承継・M&A補助金,十五次公募,license_status,yellow,yellow,https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260522001.html,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0040,P0,sii_setsubi_official,省エネ・非化石転換補助金,設備単位型 2次公募,subsidy_rate,,unknown,https://sii.or.jp/setsubi07r/overview2.html,,medium,missing_critical_field,open,,
+RQ-0041,P1,sii_setsubi_official,省エネ・非化石転換補助金,設備単位型 2次公募,exact_cap_by_equipment_category,,unknown,https://sii.or.jp/setsubi07r/overview2.html,,medium,manual_review_required,open,,
+RQ-0042,P1,sii_setsubi_official,省エネ・非化石転換補助金,設備単位型 2次公募,license_status,yellow,yellow,https://sii.or.jp/setsubi07r/overview2.html,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0043,P0,sii_kojo_official,省エネ・非化石転換補助金,工場・事業場型 2次公募,max_amount_yen,,unknown,https://sii.or.jp/koujou07r/overview2.html,,medium,missing_critical_field,open,,
+RQ-0044,P0,sii_kojo_official,省エネ・非化石転換補助金,工場・事業場型 2次公募,subsidy_rate,,unknown,https://sii.or.jp/koujou07r/overview2.html,,medium,missing_critical_field,open,,
+RQ-0045,P1,sii_kojo_official,省エネ・非化石転換補助金,工場・事業場型 2次公募,business_category_detail,,unknown,https://sii.or.jp/koujou07r/overview2.html,,medium,manual_review_required,open,,
+RQ-0046,P1,sii_kojo_official,省エネ・非化石転換補助金,工場・事業場型 2次公募,license_status,yellow,yellow,https://sii.or.jp/koujou07r/overview2.html,,medium,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0047,P0,shift_official,SHIFT事業（工場・事業場における先導的な脱炭素化取組推進事業）,令和8年度公募,application_end,,unknown,https://shift.env.go.jp/,,low,missing_critical_field,open,,
+RQ-0048,P0,shift_official,SHIFT事業（工場・事業場における先導的な脱炭素化取組推進事業）,令和8年度公募,max_amount_yen,,unknown,https://shift.env.go.jp/,,low,missing_critical_field,open,,
+RQ-0049,P0,shift_official,SHIFT事業（工場・事業場における先導的な脱炭素化取組推進事業）,令和8年度公募,subsidy_rate,,unknown,https://shift.env.go.jp/,,low,missing_critical_field,open,,
+RQ-0050,P1,shift_official,SHIFT事業（工場・事業場における先導的な脱炭素化取組推進事業）,令和8年度公募,portal_type,,unknown,https://shift.env.go.jp/,,low,manual_review_required,open,,
+RQ-0051,P1,shift_official,SHIFT事業（工場・事業場における先導的な脱炭素化取組推進事業）,令和8年度公募,license_status,yellow,yellow,https://shift.env.go.jp/,,low,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0052,P1,osaka_pref_profit,令和8年度 利益率向上・賃上げ支援事業,,exact_electronic_application_method,,unknown,https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html,,high,manual_review_required,open,,
+RQ-0053,P1,osaka_pref_profit,令和8年度 利益率向上・賃上げ支援事業,,license_status,yellow,yellow,https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0054,P1,osaka_pref_ac,令和8年度中小事業者高効率空調機導入支援事業補助金,,license_status,yellow,yellow,https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0055,P1,osaka_pref_decarbon,令和8年度 中小事業者の脱炭素化に係る自主的取組支援補助金,,gBizID_required,,unknown,https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/plan2_subsidy.html,,high,manual_review_required,open,,
+RQ-0056,P1,osaka_pref_decarbon,令和8年度 中小事業者の脱炭素化に係る自主的取組支援補助金,,license_status,yellow,yellow,https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/plan2_subsidy.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0057,P1,osaka_city_energy,大阪市省エネ診断補助金,令和8年度予定,exact_application_start,,unknown,https://www.city.osaka.lg.jp/kankyo/page/0000653861.html,,medium,manual_review_required,open,,
+RQ-0058,P0,osaka_city_energy,大阪市省エネ診断補助金,令和8年度予定,application_end,,unknown,https://www.city.osaka.lg.jp/kankyo/page/0000653861.html,,medium,missing_critical_field,open,,
+RQ-0059,P1,osaka_city_energy,大阪市省エネ診断補助金,令和8年度予定,electronic_application,,unknown,https://www.city.osaka.lg.jp/kankyo/page/0000653861.html,,medium,manual_review_required,open,,
+RQ-0060,P1,osaka_city_energy,大阪市省エネ設備導入補助金,令和8年度予定,exact_application_start,,unknown,https://www.city.osaka.lg.jp/kankyo/page/0000653861.html,,medium,manual_review_required,open,,
+RQ-0061,P0,osaka_city_energy,大阪市省エネ設備導入補助金,令和8年度予定,application_end,,unknown,https://www.city.osaka.lg.jp/kankyo/page/0000653861.html,,medium,missing_critical_field,open,,
+RQ-0062,P1,osaka_city_energy,大阪市省エネ設備導入補助金,令和8年度予定,eligibility_detail,,unknown,https://www.city.osaka.lg.jp/kankyo/page/0000653861.html,,medium,manual_review_required,open,,
+RQ-0063,P1,higashiosaka_energy,令和8年度東大阪市省エネ設備更新事業補助金,,gBizID_required,,unknown,https://www.city.higashiosaka.lg.jp/0000035654.html,,high,manual_review_required,open,,
+RQ-0064,P1,higashiosaka_energy,令和8年度東大阪市省エネ設備更新事業補助金,,license_status,yellow,yellow,https://www.city.higashiosaka.lg.jp/0000035654.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0065,P1,hyogo_pref_kasegu,稼ぐ力の強化に向けた設備投資支援事業,第1期,license_status,yellow,yellow,https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0066,P1,hyogo_pref_kasegu,稼ぐ力の強化に向けた設備投資支援事業,第2期,license_status,yellow,yellow,https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0067,P1,kyoto_city_people_work,中小企業ひと・しごと環境魅力向上支援事業補助金,令和8年度,license_status,yellow,yellow,https://www.city.kyoto.lg.jp/sankan/page/0000351813.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0068,P0,kyoto_pref_startup,京都府起業支援事業費補助金,令和8年度,application_start,,unknown,https://www.pref.kyoto.jp/sangyo-sien/2026kigyoshien.html,,low,missing_critical_field,open,,
+RQ-0069,P0,kyoto_pref_startup,京都府起業支援事業費補助金,令和8年度,application_end,,unknown,https://www.pref.kyoto.jp/sangyo-sien/2026kigyoshien.html,,low,missing_critical_field,open,,
+RQ-0070,P1,kyoto_pref_startup,京都府起業支援事業費補助金,令和8年度,application_method,,unknown,https://www.pref.kyoto.jp/sangyo-sien/2026kigyoshien.html,,low,manual_review_required,open,,
+RQ-0071,P1,kyoto_pref_startup,京都府起業支援事業費補助金,令和8年度,target_area_detail,,unknown,https://www.pref.kyoto.jp/sangyo-sien/2026kigyoshien.html,,low,manual_review_required,open,,
+RQ-0072,P1,kyoto_pref_startup,京都府起業支援事業費補助金,令和8年度,license_status,yellow,yellow,https://www.pref.kyoto.jp/sangyo-sien/2026kigyoshien.html,,low,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0073,P0,kyoto_city_dx,中小企業デジタル化・DXモデル構築事業,令和8年度,application_start,,unknown,https://www.city.kyoto.lg.jp/sankan/page/0000353048.html,,low,missing_critical_field,open,,
+RQ-0074,P0,kyoto_city_dx,中小企業デジタル化・DXモデル構築事業,令和8年度,application_end,,unknown,https://www.city.kyoto.lg.jp/sankan/page/0000353048.html,,low,missing_critical_field,open,,
+RQ-0075,P1,kyoto_city_dx,中小企業デジタル化・DXモデル構築事業,令和8年度,exact_hard_rules,,unknown,https://www.city.kyoto.lg.jp/sankan/page/0000353048.html,,low,manual_review_required,open,,
+RQ-0076,P1,kyoto_city_dx,中小企業デジタル化・DXモデル構築事業,令和8年度,license_status,yellow,yellow,https://www.city.kyoto.lg.jp/sankan/page/0000353048.html,,low,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0077,P1,kobe_city_dx,神戸市中小企業DX推進支援補助制度,システム導入事業・通常枠,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/2026dxsystem.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0078,P1,kobe_city_dx,神戸市中小企業DX推進支援補助制度,システム導入事業・DXモデル事業枠,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/2026dxsystem.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0079,P1,kobe_city_dx,神戸市中小企業DX推進支援補助制度,DX人材育成事業,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/2026dxjinzai.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0080,P1,kobe_city_invest,神戸市中小企業投資促進等助成制度,（A）設備投資又は新増設・一般,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/business/sangyoshinko/shokogyo/venture/monodukuri/toshisokushin/08tosisokushinjosei.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0081,P1,kobe_city_invest,神戸市中小企業投資促進等助成制度,（A）設備投資・IoT・AI・ロボット,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/business/sangyoshinko/shokogyo/venture/monodukuri/toshisokushin/08tosisokushinjosei.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0082,P1,kobe_city_invest,神戸市中小企業投資促進等助成制度,（C）ロボット導入シミュレーション,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/business/sangyoshinko/shokogyo/venture/monodukuri/toshisokushin/08tosisokushinjosei.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0083,P1,kobe_city_invest,神戸市中小企業投資促進等助成制度,（D）ロボットSI育成設備取得,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/business/sangyoshinko/shokogyo/venture/monodukuri/toshisokushin/08tosisokushinjosei.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認
+RQ-0084,P1,kobe_city_challenge,中小企業チャレンジサポート補助金,2026年度,license_status,yellow,yellow,https://www.city.kobe.lg.jp/a93457/2026challengesupport.html,,high,license_unknown,open,,利用規約・引用範囲・raw保存可否を確認

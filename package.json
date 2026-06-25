@@ -1,0 +1,43 @@
+{
+  "name": "hojokin-pocket",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:web": "vite --host 127.0.0.1",
+    "dev:api": "node server/index.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "npm run test:legal-copy && npm run test:unit && npm run test:quality-gates",
+    "test:unit": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "test:quality-gates": "node scripts/quality-behavior-gates.mjs",
+    "test:synthetic": "SYNTHETIC_FIXTURE_MODE=1 node --test tests/synthetic-batch.test.mjs",
+    "test:e2e": "node scripts/e2e-local-runner.mjs",
+    "test:legal-copy": "node scripts/legal-copy-guard.mjs",
+    "score:phase1": "node scripts/score-phase1-modules.mjs",
+    "score:multidim": "node scripts/score-multidim.mjs",
+    "db:validate": "node scripts/db-migrations.mjs --validate",
+    "db:migrate": "node scripts/db-migrations.mjs --migrate",
+    "db:reset": "node scripts/db-migrations.mjs --reset",
+    "db:seed": "node scripts/db-migrations.mjs --seed",
+    "source:refresh:dry-run": "node scripts/source-refresh-dry-run.mjs",
+    "seed:draft:import": "node scripts/import-seed-draft-pack.mjs",
+    "seed:draft:publish:closed-beta": "node scripts/publish-seed-drafts.mjs",
+    "bedrock:preflight": "node scripts/bedrock-readiness.mjs",
+    "bedrock:smoke": "node scripts/bedrock-readiness.mjs --smoke",
+    "clean:runtime": "node scripts/clean-runtime-artifacts.mjs",
+    "verify:ci": "npm run clean:runtime && npm run build && npm run test && npm run db:validate && npm run score:phase1 && npm run score:multidim && npm run test:e2e",
+    "verify:repeat": "node scripts/verify-repeat.mjs 10"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1073.0",
+    "pg": "^8.22.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

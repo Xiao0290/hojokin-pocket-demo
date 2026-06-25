@@ -1,0 +1,42 @@
+name: Infra or process work
+description: CI, deployment, workflow, docs, security boundary, or operational process work
+title: "[Infra] "
+labels:
+  - type:infra
+  - status:ready
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What system or process outcome should this issue deliver?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      placeholder: "- CI changes\n- Documentation\n- Deployment configuration"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: "- [ ] Workflow is documented\n- [ ] CI passes\n- [ ] Rollback or handoff notes exist"
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      placeholder: "- [ ] npm run verify:ci\n- [ ] GitHub Actions succeeds"
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Notes
+      description: Operational risk, external dependency, or migration note.
+    validations:
+      required: false

@@ -1,0 +1,618 @@
+{
+  "schema": "hojokin-pocket.phase1.development-fixtures.v1",
+  "fixtureType": "development-only",
+  "generatedAt": "2026-06-20T12:00:00+09:00",
+  "lastSeenAt": "2026-06-20",
+  "notice": "Static local fixture for Phase 1 MVP development. Do not treat as realtime subsidy advice or eligibility judgment.",
+  "programs": [
+    {
+      "id": "jizokuka-normal-20",
+      "program": "小規模事業者持続化補助金",
+      "round": "第20回公募 / 一般型・通常枠",
+      "sourceUrl": "https://official.jizokukanb.com/shinsei",
+      "lastSeenAt": "2026-06-20",
+      "maxLimit": {
+        "amountYen": 2500000,
+        "display": "通常枠50万円。インボイス特例で+50万円、賃金引上げ特例で+150万円。特例併用時は最大250万円。",
+        "certainty": "official"
+      },
+      "subsidyRate": {
+        "display": "2/3。賃金引上げ特例のうち赤字事業者は3/4。",
+        "certainty": "official"
+      },
+      "acceptStart": {
+        "value": "2026-11-05T00:00:00+09:00",
+        "display": "2026年11月5日（木）",
+        "certainty": "official_planned"
+      },
+      "acceptEnd": {
+        "value": "2026-12-15T17:00:00+09:00",
+        "display": "2026年12月15日（火）17:00",
+        "certainty": "official_planned"
+      },
+      "status": "announced_not_open",
+      "issuer": "小規模事業者持続化補助金事務局 / 中小企業庁関連事業",
+      "requirements": [
+        "小規模事業者等が対象。商業・サービス業（宿泊業・娯楽業を除く）は常時使用する従業員5人以下、製造業その他は20人以下が目安。",
+        "自ら策定した経営計画に基づき、販路開拓等または販路開拓と併せて行う業務効率化に取り組むこと。",
+        "地域の商工会または商工会議所から事業支援計画書（様式4）の交付を受けること。",
+        "電子申請に必要なGビズIDプライムを準備すること。"
+      ],
+      "requiredDocuments": [
+        "GビズIDプライム",
+        "経営計画",
+        "補助事業計画",
+        "事業支援計画書（様式4）",
+        "希望する特例・加点に関する添付書類",
+        "見積書等（採択後または交付申請時に詳細確認）"
+      ],
+      "keywords": [
+        "販路開拓",
+        "小規模事業者",
+        "広告",
+        "Webサイト",
+        "展示会",
+        "新商品開発",
+        "業務効率化"
+      ],
+      "hardRules": [
+        "第20回は申請受付開始が2026年11月5日の予定であり、2026年6月20日時点では受付前。",
+        "事業支援計画書（様式4）発行の受付締切は2026年12月4日。",
+        "申請受付締切は2026年12月15日17:00予定。",
+        "電子申請システムへの入力と商工会・商工会議所への様式4発行依頼が必要。",
+        "採択審査があり、不採択となる場合がある。"
+      ],
+      "softRules": [
+        "販路開拓の具体性、売上拡大の仮説、顧客獲得導線が明確な案件を優先して診断する。",
+        "Web制作だけでなく、広告、展示会、商品開発などの販路拡大施策と組み合わせると提案しやすい。",
+        "商工会・商工会議所への相談リードタイムを長めに見積もる。"
+      ],
+      "evidence": [
+        {
+          "label": "Official schedule page",
+          "url": "https://official.jizokukanb.com/shinsei",
+          "sourceType": "official_schedule_page",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "sourceUrl",
+            "status",
+            "acceptStart",
+            "acceptEnd",
+            "hardRules"
+          ],
+          "note": "第20回公募スケジュール、様式4受付締切、電子申請準備中の状態を確認した。"
+        },
+        {
+          "label": "Official public offering guidelines PDF 第7版",
+          "url": "https://official.jizokukanb.com/wp-content/uploads/2026/05/20_%E9%80%9A%E5%B8%B8%E6%9E%A0_%E5%85%AC%E5%8B%9F%E8%A6%81%E9%A0%98_%E7%AC%AC7%E7%89%88.pdf",
+          "sourceType": "official_guidelines_pdf",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "maxLimit",
+            "subsidyRate",
+            "requirements",
+            "requiredDocuments",
+            "keywords"
+          ],
+          "note": "補助上限、補助率、対象者、販路開拓・業務効率化の対象経費、電子申請と様式4の必要性を要約した。"
+        }
+      ],
+      "sourceNotes": [
+        "Primary source is the official 商工会地区 page. 商工会議所地区は別窓口のため、実運用では所在地に応じて再確認する。",
+        "2026年6月20日時点では第20回の受付開始前であり、acceptStart/acceptEnd は公式予定日として扱う。"
+      ],
+      "sourceRecord": {
+        "registrySourceId": "official-subsidy-secretariats",
+        "sourceUrl": "https://official.jizokukanb.com/shinsei",
+        "termsUrl": "https://official.jizokukanb.com/",
+        "licenseStatus": "restricted",
+        "commercialUse": "restricted",
+        "redistribution": "restricted",
+        "automationMode": "manual",
+        "contentHash": "470fd5975dfd1a09bc7bad74b0d0e443d699b6028369083c5c5d06b0f0c61c0d",
+        "staleAfterDays": 14,
+        "attribution": "小規模事業者持続化補助金事務局, source URL, fetched date, and official-site-control caveat.",
+        "transformation": "Development fixture summary only; no production ETL or official endorsement.",
+        "displayCaveat": "公式サイトの最新情報を必ず確認してください。"
+      },
+      "fixtureNotes": [
+        "商工会地区ページを主ソースにした開発用要約。商工会議所地区は別窓口のため、実運用では所在地に応じて再確認する。"
+      ]
+    },
+    {
+      "id": "monodukuri-23",
+      "program": "ものづくり補助金",
+      "round": "第23次締切 / 令和6年度補正予算",
+      "sourceUrl": "https://portal.monodukuri-hojo.jp/about.html",
+      "lastSeenAt": "2026-06-20",
+      "maxLimit": {
+        "amountYen": 40000000,
+        "display": "グローバル枠3,000万円。大幅賃上げ特例の上乗せ最大1,000万円を含めると最大4,000万円の想定。",
+        "certainty": "official_with_inferred_combination"
+      },
+      "subsidyRate": {
+        "display": "中小企業1/2。小規模企業・小規模事業者および再生事業者2/3。最低賃金引上げ特例で2/3に引上げ可能。",
+        "certainty": "official"
+      },
+      "acceptStart": {
+        "value": "2026-04-03T17:00:00+09:00",
+        "display": "2026年4月3日（金）17:00",
+        "certainty": "official"
+      },
+      "acceptEnd": {
+        "value": "2026-05-08T17:00:00+09:00",
+        "display": "2026年5月8日（金）17:00",
+        "certainty": "official"
+      },
+      "status": "closed_waiting_results",
+      "issuer": "ものづくり補助金事務局（全国中小企業団体中央会） / 中小企業庁関連事業",
+      "requirements": [
+        "日本国内に補助事業の実施場所を有する中小企業者等が対象。",
+        "常時使用する従業員を1人以上有すること。",
+        "革新的な新製品・新サービス開発、または海外需要開拓に関する設備投資等であること。",
+        "事業計画期間において付加価値額の年平均成長率3.0%以上を目指すこと。",
+        "従業員1人あたり給与支給総額の年平均成長率3.5%以上を目指すこと。",
+        "事業所内最低賃金を地域別最低賃金+30円以上とすること。",
+        "従業員21名以上の場合は一般事業主行動計画の策定・公表が必要。"
+      ],
+      "requiredDocuments": [
+        "GビズIDプライム",
+        "電子申請フォーム入力内容",
+        "事業計画書",
+        "労働者名簿",
+        "決算書等の事業者確認資料",
+        "賃金引上げ・最低賃金に関する確認資料",
+        "見積書・仕様書等の設備投資根拠資料"
+      ],
+      "keywords": [
+        "設備投資",
+        "新製品開発",
+        "新サービス開発",
+        "生産性向上",
+        "海外展開",
+        "システム構築",
+        "賃上げ"
+      ],
+      "hardRules": [
+        "第23次締切は2026年5月8日17:00で受付終了。",
+        "申請は電子申請で行い、GビズIDプライムが必要。",
+        "単なる機械装置導入だけで、新製品・新サービス開発を伴わない事業は対象外。",
+        "補助対象者・補助対象事業に合わない申請や不備のある申請は審査対象外になる。",
+        "採択後も交付決定時に経費精査があり、減額または全額対象外となる可能性がある。"
+      ],
+      "softRules": [
+        "自社の中期計画、付加価値額、賃金計画と補助事業を結びつけて評価する。",
+        "導入設備の革新性と市場への新規性を早い段階でヒアリングする。",
+        "サイバーセキュリティやデータ利活用の観点も加点・審査説明に備えて整理する。"
+      ],
+      "evidence": [
+        {
+          "label": "Official program portal",
+          "url": "https://portal.monodukuri-hojo.jp/about.html",
+          "sourceType": "official_schedule_page",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "sourceUrl",
+            "status",
+            "acceptStart",
+            "acceptEnd",
+            "requiredDocuments",
+            "hardRules"
+          ],
+          "note": "23次締切の公募開始日、申請開始日、申請締切日、GビズIDプライムの事前取得要件を確認した。"
+        },
+        {
+          "label": "Official public offering guidelines PDF 23次締切",
+          "url": "https://portal.monodukuri-hojo.jp/common/bunsho/ippan/23th/%E5%85%AC%E5%8B%9F%E8%A6%81%E9%A0%98_23%E6%AC%A1%E7%B7%A0%E5%88%87_20260206.pdf",
+          "sourceType": "official_guidelines_pdf",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "maxLimit",
+            "subsidyRate",
+            "requirements",
+            "keywords"
+          ],
+          "note": "製品・サービス高付加価値化枠とグローバル枠の補助上限・補助率、基本要件、補助対象経費を要約した。"
+        }
+      ],
+      "sourceNotes": [
+        "第23次は2026年6月20日時点で申請締切後のため、status は closed_waiting_results とする。",
+        "maxLimit.amountYen はグローバル枠の3,000万円に大幅賃上げ特例上乗せ最大1,000万円を含めたMVP用の最大表示であり、個別枠の上限は公式公募要領で再確認する。"
+      ],
+      "sourceRecord": {
+        "registrySourceId": "official-subsidy-secretariats",
+        "sourceUrl": "https://portal.monodukuri-hojo.jp/about.html",
+        "termsUrl": "https://portal.monodukuri-hojo.jp/",
+        "licenseStatus": "restricted",
+        "commercialUse": "restricted",
+        "redistribution": "restricted",
+        "automationMode": "manual",
+        "contentHash": "fea8905bdddaaad16b6fd4a34d275841a433ff13a37d0fed4288453c3f478ba7",
+        "staleAfterDays": 14,
+        "attribution": "ものづくり補助金事務局, source URL, fetched date, and official-site-control caveat.",
+        "transformation": "Development fixture summary only; no production ETL or official endorsement.",
+        "displayCaveat": "公式サイトの最新情報を必ず確認してください。"
+      },
+      "fixtureNotes": [
+        "第23次は2026年6月20日時点で受付終了済み。Phase 1の履歴表示・締切済みカード用fixtureとして残す。"
+      ]
+    },
+    {
+      "id": "it-digital-ai-2026-normal-3",
+      "program": "IT導入補助金（デジタル化・AI導入補助金2026）",
+      "round": "2026 通常枠 / 3次締切分",
+      "sourceUrl": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/",
+      "lastSeenAt": "2026-06-20",
+      "maxLimit": {
+        "amountYen": 4500000,
+        "display": "通常枠は5万円以上450万円以下。4プロセス以上は150万円以上450万円以下。",
+        "certainty": "official"
+      },
+      "subsidyRate": {
+        "display": "1/2以内。一定の最低賃金未満雇用条件を満たす場合は2/3以内。",
+        "certainty": "official"
+      },
+      "acceptStart": {
+        "value": "2026-03-30T00:00:00+09:00",
+        "display": "2026年3月30日（月）",
+        "certainty": "official"
+      },
+      "acceptEnd": {
+        "value": "2026-07-21T17:00:00+09:00",
+        "display": "2026年7月21日（火）17:00",
+        "certainty": "official"
+      },
+      "status": "open",
+      "issuer": "デジタル化・AI導入補助金 / IT導入補助金事務局（TOPPAN株式会社） / 中小機構・中小企業庁監督",
+      "requirements": [
+        "中小企業・小規模事業者等が対象。",
+        "登録されたIT導入支援事業者と連携し、登録済みITツールを導入すること。",
+        "1種類以上の業務プロセスを保有するソフトウェアを申請すること。",
+        "汎用プロセスのみの単体利用は不可。",
+        "ソフトウェア購入費、クラウド利用料（最大2年分）、導入関連費等が対象。"
+      ],
+      "requiredDocuments": [
+        "GビズIDプライム",
+        "SECURITY ACTION自己宣言",
+        "IT導入支援事業者との交付申請情報",
+        "導入予定ITツール情報",
+        "法人番号・事業者基本情報",
+        "賃金水準条件を使う場合の確認資料"
+      ],
+      "keywords": [
+        "ITツール",
+        "クラウド",
+        "AI",
+        "DX",
+        "業務プロセス",
+        "販売管理",
+        "会計",
+        "ホテル管理",
+        "セキュリティ"
+      ],
+      "hardRules": [
+        "3次締切は2026年7月21日17:00。",
+        "登録済みIT導入支援事業者・登録済みITツールが前提。",
+        "1法人・1個人事業主あたり通常枠は交付申請期間中1申請のみ。",
+        "交付決定前の契約・発注・支払いは対象外になる可能性があるため、公式手順で確認する。",
+        "ITツールが業務プロセス要件を満たす必要がある。"
+      ],
+      "softRules": [
+        "URL診断では、予約管理、会計、在庫、顧客対応、給与など明確な業務プロセスを抽出する。",
+        "補助対象ツール検索に接続できるまでは、候補制度として表示し、登録ツールの確認を次アクションにする。",
+        "宿泊業ではPMS、サイトコントローラー、清掃管理、販売管理の導入ニーズを優先して確認する。"
+      ],
+      "evidence": [
+        {
+          "label": "Official normal-frame applicant page",
+          "url": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/",
+          "sourceType": "official_program_page",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "sourceUrl",
+            "status",
+            "acceptEnd",
+            "maxLimit",
+            "subsidyRate",
+            "requirements",
+            "keywords"
+          ],
+          "note": "通常枠の補助額、補助率、ITツールの業務プロセス要件、3次締切分スケジュールを確認した。"
+        },
+        {
+          "label": "Official public offering guidelines PDF 通常枠",
+          "url": "https://it-shien.smrj.go.jp/pdf/it2026_koubo_tsujyo.pdf",
+          "sourceType": "official_guidelines_pdf",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "acceptStart",
+            "requiredDocuments",
+            "hardRules"
+          ],
+          "note": "交付申請期間、1法人・1個人事業主あたりの申請回数、IT導入支援事業者・ITツール前提を要約した。"
+        }
+      ],
+      "sourceNotes": [
+        "2026年度公式サイトは「デジタル化・AI導入補助金2026」表記。fixture では利用者に通じやすい旧称・通称として IT導入補助金を併記する。",
+        "通常枠は登録済みIT導入支援事業者・登録済みITツールが前提のため、URL診断の一致だけでは申請可否を判定しない。"
+      ],
+      "sourceRecord": {
+        "registrySourceId": "official-subsidy-secretariats",
+        "sourceUrl": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/",
+        "termsUrl": "https://it-shien.smrj.go.jp/",
+        "licenseStatus": "restricted",
+        "commercialUse": "restricted",
+        "redistribution": "restricted",
+        "automationMode": "manual",
+        "contentHash": "8c518eea0c84cf3041e6c5305826c11309468ffa64e64a90f3f3b6f301a0619a",
+        "staleAfterDays": 14,
+        "attribution": "IT導入補助金事務局, source URL, fetched date, and official-site-control caveat.",
+        "transformation": "Development fixture summary only; no production ETL or official endorsement.",
+        "displayCaveat": "公式サイトの最新情報を必ず確認してください。"
+      },
+      "fixtureNotes": [
+        "2026年度公式サイトは『デジタル化・AI導入補助金2026』表記。旧称・通称としてIT導入補助金を併記した。"
+      ]
+    },
+    {
+      "id": "shoukei-ma-15",
+      "program": "事業承継・M&A補助金",
+      "round": "15次公募 / 事業承継促進・専門家活用・PMI推進・廃業再チャレンジ",
+      "sourceUrl": "https://shoukei-mahojokin.go.jp/r7h/",
+      "lastSeenAt": "2026-06-20",
+      "maxLimit": {
+        "amountYen": 20000000,
+        "display": "専門家活用枠の買い手支援類型は600万〜800万円、100億企業要件で2,000万円。事業承継促進枠・PMI事業統合投資類型は800万〜1,000万円。廃業・再チャレンジ枠は300万円。",
+        "certainty": "official"
+      },
+      "subsidyRate": {
+        "display": "枠・類型により1/3、1/2、2/3。事業承継促進枠は小規模事業者等2/3、それ以外1/2。",
+        "certainty": "official"
+      },
+      "acceptStart": {
+        "value": "2026-06-19T00:00:00+09:00",
+        "display": "2026年6月19日（金）",
+        "certainty": "official"
+      },
+      "acceptEnd": {
+        "value": "2026-07-24T17:00:00+09:00",
+        "display": "2026年7月24日（金）17:00",
+        "certainty": "official"
+      },
+      "status": "open",
+      "issuer": "事業承継・M&A補助金事務局 / 中小企業庁・中小機構関連事業",
+      "requirements": [
+        "中小企業者等または個人事業主が対象。",
+        "親族内承継・従業員承継、M&A、PMI、廃業・再チャレンジなど、申請枠に合う事業であること。",
+        "事業承継促進枠では、後継者が中心となる生産性向上に資する設備投資等が対象。",
+        "専門家活用枠では、M&A支援機関登録制度に登録されたFAまたは仲介業者による費用等に限られる経費がある。",
+        "電子申請にはGビズIDプライムが必要。"
+      ],
+      "requiredDocuments": [
+        "GビズIDプライム",
+        "公募申請書（別紙）",
+        "事業計画書または申請枠別計画資料",
+        "認定経営革新等支援機関による確認書（事業承継促進枠等）",
+        "事業承継計画表またはM&A類型別資料",
+        "決算書・確定申告書等の事業者確認資料",
+        "必要書類チェックリスト",
+        "加点・賃上げ・廃業併用に関する該当書類"
+      ],
+      "keywords": [
+        "事業承継",
+        "M&A",
+        "PMI",
+        "後継者",
+        "FA",
+        "仲介",
+        "廃業",
+        "再チャレンジ",
+        "設備投資"
+      ],
+      "hardRules": [
+        "15次公募の申請受付期間は2026年6月19日から2026年7月24日17:00まで。",
+        "申請はJグランツで行う。",
+        "GビズIDプライムの取得には1〜2週間程度、混雑時は3週間程度かかる。",
+        "締切直前は差戻し修正が間に合わない可能性があるため、公式サイトは5営業日前の提出を推奨している。",
+        "M&A支援機関登録制度の対象費用は登録済み支援機関の支援に限る。"
+      ],
+      "softRules": [
+        "URL診断では、代表者年齢、後継者有無、株式・事業譲渡予定、買収/売却意向を追加質問に回す。",
+        "申請書類の作成を第三者に依頼する場合は、公式手引きの資格・委任・証憑要件を必ず確認する。",
+        "M&A専門家費用だけでなく、PMI後の設備投資や廃業費の併用可能性を分けて診断する。"
+      ],
+      "evidence": [
+        {
+          "label": "Official 14次以降 program site",
+          "url": "https://shoukei-mahojokin.go.jp/r7h/",
+          "sourceType": "official_program_page",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "sourceUrl",
+            "status",
+            "acceptStart",
+            "keywords"
+          ],
+          "note": "15次公募の公募申請受付開始告知、各枠への導線、事業目的を確認した。"
+        },
+        {
+          "label": "15次 事業承継促進 公募申請手続き",
+          "url": "https://shoukei-mahojokin.go.jp/r7h/15-succession_application/",
+          "sourceType": "official_application_page",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "requiredDocuments",
+            "hardRules"
+          ],
+          "note": "公募申請時の必要書類、Jグランツ申請、GビズIDプライムの取得リードタイムを確認した。"
+        },
+        {
+          "label": "15次 事業承継促進 公募要領 PDF",
+          "url": "https://shoukei-mahojokin.go.jp/assets/documents/r7h/15-succession/requirements_succession_15.pdf",
+          "sourceType": "official_guidelines_pdf",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "acceptEnd",
+            "maxLimit",
+            "subsidyRate",
+            "requirements"
+          ],
+          "note": "事業承継促進枠の補助上限・補助率、対象者、15次公募の締切情報を要約した。"
+        }
+      ],
+      "sourceNotes": [
+        "This record intentionally aggregates 15次の複数枠 for Phase 1 matching. Production data should split 事業承継促進、専門家活用、PMI推進、廃業・再チャレンジ into separate records.",
+        "maxLimit.amountYen は専門家活用枠の100億企業要件を含む最大表示であり、事業承継促進枠単体の上限ではない。"
+      ],
+      "sourceRecord": {
+        "registrySourceId": "official-subsidy-secretariats",
+        "sourceUrl": "https://shoukei-mahojokin.go.jp/r7h/",
+        "termsUrl": "https://shoukei-mahojokin.go.jp/r7h/",
+        "licenseStatus": "restricted",
+        "commercialUse": "restricted",
+        "redistribution": "restricted",
+        "automationMode": "manual",
+        "contentHash": "447ec90e8e8f0b6442311052a7e768c41130aa9725e6d3653d3c1e01ffde707c",
+        "staleAfterDays": 14,
+        "attribution": "事業承継・M&A補助金事務局, source URL, fetched date, and official-site-control caveat.",
+        "transformation": "Development fixture summary only; no production ETL or official endorsement.",
+        "displayCaveat": "公式サイトの最新情報を必ず確認してください。"
+      },
+      "fixtureNotes": [
+        "15次公式サイトおよび中小企業庁公表ページを基にした統合fixture。枠別の細部は本番データ化時に分割する。"
+      ]
+    },
+    {
+      "id": "shoryokuka-ippan-7",
+      "program": "中小企業省力化投資補助金",
+      "round": "一般型 第7回公募",
+      "sourceUrl": "https://shoryokuka.smrj.go.jp/ippan/",
+      "lastSeenAt": "2026-06-20",
+      "maxLimit": {
+        "amountYen": 100000000,
+        "display": "101人以上は8,000万円。大幅賃上げ特例適用時は1億円。",
+        "certainty": "official"
+      },
+      "subsidyRate": {
+        "display": "中小企業1/2（特例適用時2/3）。小規模企業者・小規模事業者および再生事業者2/3。",
+        "certainty": "official"
+      },
+      "acceptStart": {
+        "value": null,
+        "display": "2026年7月上旬（予定）",
+        "certainty": "official_period_only"
+      },
+      "acceptEnd": {
+        "value": null,
+        "display": "2026年7月下旬（予定）",
+        "certainty": "official_month_only"
+      },
+      "status": "announced_acceptance_pending",
+      "issuer": "独立行政法人中小企業基盤整備機構 / 中小企業省力化投資補助金事務局",
+      "requirements": [
+        "人手不足に悩む中小企業等が対象。",
+        "IoT、ロボット、AI、センサー等のデジタル技術を活用した専用設備・システムを導入すること。",
+        "生産・業務プロセスまたはサービス提供方法の省力化に取り組むこと。",
+        "申請者自身が事業計画を作成し、事業の実行に責任を持つこと。",
+        "申請前にカタログ注文型の製品カタログを確認すること。"
+      ],
+      "requiredDocuments": [
+        "GビズIDプライム",
+        "損益計算書 直近2期分",
+        "貸借対照表 直近2期分",
+        "事業計画書（その1・その2）",
+        "事業計画書（その3）",
+        "1人当たり給与支給総額の確認書",
+        "導入予定の機械装置等・システムの仕様・積算根拠が分かる書類",
+        "法人の場合は履歴事項全部証明書、納税証明書、法人事業概況説明書、役員名簿、株主・出資者名簿",
+        "個人の場合は確定申告書控え、納税証明書、青色申告決算書または収支内訳書"
+      ],
+      "keywords": [
+        "省力化",
+        "人手不足",
+        "IoT",
+        "ロボット",
+        "AI",
+        "センサー",
+        "専用設備",
+        "システム構築",
+        "賃上げ"
+      ],
+      "hardRules": [
+        "第7回の公募開始日は2026年6月5日。",
+        "申請受付開始は2026年7月上旬予定、締切は2026年7月下旬予定で、2026年6月20日時点では exact date 未公表。",
+        "本事業へ応募申請・交付申請中、または交付決定後に補助金支払が完了していない事業者は申請できない。",
+        "電子申請のみで、GビズIDプライムが必要。",
+        "見積額50万円以上は原則として同一条件の相見積が必要。",
+        "システム構築費は積算根拠が明確な見積書と仕様書が必要で、『システム開発一式』のような見積は認められない。"
+      ],
+      "softRules": [
+        "宿泊・清掃・在庫・製造・検品など、人手作業時間を削減できる業務から診断する。",
+        "単なる汎用品購入より、現場に合わせた設備導入・システム構築として説明できる案件を優先する。",
+        "省力化指数、削減工数、投資回収期間をヒアリング項目に入れる。"
+      ],
+      "evidence": [
+        {
+          "label": "Official general-frame top page",
+          "url": "https://shoryokuka.smrj.go.jp/ippan/",
+          "sourceType": "official_program_page",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "sourceUrl",
+            "requirements",
+            "maxLimit",
+            "subsidyRate",
+            "keywords"
+          ],
+          "note": "一般型の対象者、省力化投資の対象、従業員規模別の補助上限、補助率を確認した。"
+        },
+        {
+          "label": "Official general-frame schedule page",
+          "url": "https://shoryokuka.smrj.go.jp/ippan/schedule/",
+          "sourceType": "official_schedule_page",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "status",
+            "acceptStart",
+            "acceptEnd",
+            "hardRules"
+          ],
+          "note": "第7回の公募開始日、申請受付開始予定、公募締切予定、採択発表予定を確認した。"
+        },
+        {
+          "label": "Official public offering guidelines PDF 第7回公募",
+          "url": "https://shoryokuka.smrj.go.jp/assets/pdf/application_guidelines_ippan_07.pdf",
+          "sourceType": "official_guidelines_pdf",
+          "observedAt": "2026-06-20",
+          "supports": [
+            "requiredDocuments",
+            "requirements",
+            "hardRules"
+          ],
+          "note": "申請者責任、カタログ注文型確認、見積・仕様書・事業計画関連の注意点を要約した。"
+        }
+      ],
+      "sourceNotes": [
+        "第7回は2026年6月20日時点で受付開始日・締切日が月内予定までの公表だったため、acceptStart.value と acceptEnd.value は null にしている。",
+        "Exact dates must be refreshed from the official schedule page before a deadline reminder or application workflow is shown."
+      ],
+      "sourceRecord": {
+        "registrySourceId": "official-subsidy-secretariats",
+        "sourceUrl": "https://shoryokuka.smrj.go.jp/ippan/",
+        "termsUrl": "https://shoryokuka.smrj.go.jp/",
+        "licenseStatus": "restricted",
+        "commercialUse": "restricted",
+        "redistribution": "restricted",
+        "automationMode": "manual",
+        "contentHash": "7faca6265a17bd8da02e530a1243f0929ef2c7c4c16cf2b074c9e607d0001221",
+        "staleAfterDays": 14,
+        "attribution": "中小企業省力化投資補助金事務局, source URL, fetched date, and official-site-control caveat.",
+        "transformation": "Development fixture summary only; no production ETL or official endorsement.",
+        "displayCaveat": "公式サイトの最新情報を必ず確認してください。"
+      },
+      "fixtureNotes": [
+        "第7回は締切日が『2026年7月下旬予定』までの公表。acceptEnd.valueは意図的にnullにしている。"
+      ]
+    }
+  ]
+}

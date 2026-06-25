@@ -1,0 +1,20 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Semantic — Status pairs" subtitle="Success / warning / danger / info + tinted bg" -->
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font); background: #fff; }
+  .wrap { padding: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .pair { border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }
+  .solid { height: 44px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 700; }
+  .tint { height: 30px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
+  .meta { padding: 6px 8px; }
+  .name { font-size: 11px; font-weight: 700; color: var(--ink); }
+  .hex { font-size: 10px; color: var(--gray-500); }
+</style></head>
+<body><div class="wrap">
+  <div class="pair"><div class="solid" style="background:var(--success)">success</div><div class="tint" style="background:var(--success-bg);color:var(--success)">採択</div><div class="meta"><div class="name">success</div><div class="hex">#15a673</div></div></div>
+  <div class="pair"><div class="solid" style="background:var(--warning)">warning</div><div class="tint" style="background:var(--warning-bg);color:var(--warning)">締切間近</div><div class="meta"><div class="name">warning</div><div class="hex">#e0900f</div></div></div>
+  <div class="pair"><div class="solid" style="background:var(--danger)">danger</div><div class="tint" style="background:var(--danger-bg);color:var(--danger)">不採択</div><div class="meta"><div class="name">danger</div><div class="hex">#e5484d</div></div></div>
+  <div class="pair"><div class="solid" style="background:var(--info)">info</div><div class="tint" style="background:var(--info-bg);color:var(--info)">診断中</div><div class="meta"><div class="name">info</div><div class="hex">#1a56f0</div></div></div>
+</div></body></html>

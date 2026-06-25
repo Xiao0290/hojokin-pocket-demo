@@ -1,0 +1,641 @@
+[
+  {
+    "round_key": "digital_ai_2026_normal_3",
+    "hard_rules": [
+      {
+        "label": "中小企業・小規模事業者等である",
+        "field": "company.size_category",
+        "operator": "in",
+        "value": [
+          "sme",
+          "small_business"
+        ],
+        "source_url": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "ITツール導入である",
+        "field": "project.expense_tags",
+        "operator": "contains_any",
+        "value": [
+          "ソフトウェア",
+          "クラウド",
+          "導入コンサルティング"
+        ],
+        "source_url": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "締切前である",
+        "field": "current_date",
+        "operator": "<=",
+        "value": "2026-07-21",
+        "source_url": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "業務プロセス改善に該当",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "IT導入",
+          "DX",
+          "AI導入",
+          "業務効率化"
+        ],
+        "weight": 20,
+        "source_url": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "導入予定のITツールは事務局登録済みですか？",
+        "field": "project.it_tool_registered",
+        "reason": "IT導入補助金は登録ITツールが前提",
+        "answer_type": "boolean"
+      },
+      {
+        "question": "GビズIDプライムは取得済みですか？",
+        "field": "company.gbizid_status",
+        "reason": "電子申請準備の確認",
+        "answer_type": "enum"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "登録ITツールの適格性",
+        "reason": "ツール登録情報との照合が必要",
+        "source_url": "https://it-shien.smrj.go.jp/applicant/subsidy/normal/"
+      }
+    ],
+    "source_urls": [
+      "https://it-shien.smrj.go.jp/applicant/subsidy/normal/"
+    ],
+    "confidence": "high",
+    "review_required": true
+  },
+  {
+    "round_key": "shoryokuka_general_7",
+    "hard_rules": [
+      {
+        "label": "中小企業等である",
+        "field": "company.size_category",
+        "operator": "in",
+        "value": [
+          "sme",
+          "small_business"
+        ],
+        "source_url": "https://shoryokuka.smrj.go.jp/ippan/",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "省力化投資である",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "省力化",
+          "設備投資",
+          "自動化"
+        ],
+        "source_url": "https://shoryokuka.smrj.go.jp/ippan/",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "人手不足・生産性向上課題が明確",
+        "field": "company.pain_points",
+        "operator": "contains_any",
+        "value": [
+          "人手不足",
+          "生産性向上",
+          "自動化"
+        ],
+        "weight": 15,
+        "source_url": "https://shoryokuka.smrj.go.jp/ippan/"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "従業員数を選択してください",
+        "field": "company.employee_count",
+        "reason": "補助上限判定に必要",
+        "answer_type": "number"
+      },
+      {
+        "question": "大幅賃上げ特例を利用予定ですか？",
+        "field": "project.wage_increase_special",
+        "reason": "上限額・補助率判定に必要",
+        "answer_type": "boolean"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "投資内容が省力化効果を満たすか",
+        "reason": "設備・システムの内容確認が必要",
+        "source_url": "https://shoryokuka.smrj.go.jp/ippan/"
+      }
+    ],
+    "source_urls": [
+      "https://shoryokuka.smrj.go.jp/ippan/",
+      "https://shoryokuka.smrj.go.jp/ippan/schedule/"
+    ],
+    "confidence": "medium",
+    "review_required": true
+  },
+  {
+    "round_key": "osaka_profit_wage_2026",
+    "hard_rules": [
+      {
+        "label": "大阪府内で事業を行う",
+        "field": "company.prefecture",
+        "operator": "==",
+        "value": "大阪府",
+        "source_url": "https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "中小企業または個人事業主である",
+        "field": "company.size_category",
+        "operator": "in",
+        "value": [
+          "sme",
+          "small_business",
+          "sole_proprietor"
+        ],
+        "source_url": "https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "給与支給総額2%以上引上げ宣言",
+        "field": "project.wage_raise_declaration",
+        "operator": "==",
+        "value": true,
+        "source_url": "https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "締切前である",
+        "field": "current_date",
+        "operator": "<=",
+        "value": "2026-06-26",
+        "source_url": "https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "利益率向上に資する投資",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "販路開拓",
+          "設備投資",
+          "広告宣伝",
+          "研修"
+        ],
+        "weight": 20,
+        "source_url": "https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "1年後に給与支給総額2%以上引上げる宣言ができますか？",
+        "field": "project.wage_raise_declaration",
+        "reason": "申請要件",
+        "answer_type": "boolean"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "利益率向上との関連性",
+        "reason": "事業計画内容の確認が必要",
+        "source_url": "https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html"
+      }
+    ],
+    "source_urls": [
+      "https://www.pref.osaka.lg.jp/o110050/keieishien/rieki/riekiritur8.html"
+    ],
+    "confidence": "high",
+    "review_required": true
+  },
+  {
+    "round_key": "osaka_high_efficiency_ac_2026",
+    "hard_rules": [
+      {
+        "label": "大阪府内の工場・事業場で実施",
+        "field": "company.prefecture",
+        "operator": "==",
+        "value": "大阪府",
+        "source_url": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "脱炭素経営宣言を行った",
+        "field": "company.decarbon_declaration",
+        "operator": "==",
+        "value": true,
+        "source_url": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "既存空調を高効率空調へ更新",
+        "field": "project.expense_tags",
+        "operator": "contains_any",
+        "value": [
+          "高効率空調",
+          "空調更新"
+        ],
+        "source_url": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "電気料金削減・CO2削減目的",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "省エネ",
+          "脱炭素",
+          "電気料金削減"
+        ],
+        "weight": 15,
+        "source_url": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "大阪府の脱炭素経営宣言は登録済みですか？",
+        "field": "company.decarbon_declaration",
+        "reason": "申請必須要件",
+        "answer_type": "boolean"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "設備仕様が高効率空調に該当するか",
+        "reason": "カタログ等の確認が必要",
+        "source_url": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html"
+      }
+    ],
+    "source_urls": [
+      "https://www.pref.osaka.lg.jp/o120020/eneseisaku/sec/r08hojokin-pac.html"
+    ],
+    "confidence": "high",
+    "review_required": true
+  },
+  {
+    "round_key": "higashiosaka_energy_equipment_2026",
+    "hard_rules": [
+      {
+        "label": "東大阪市内に設置する設備である",
+        "field": "project.installation_city",
+        "operator": "==",
+        "value": "東大阪市",
+        "source_url": "https://www.city.higashiosaka.lg.jp/0000035654.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "製造業者である",
+        "field": "company.industry_tags",
+        "operator": "contains",
+        "value": "製造業",
+        "source_url": "https://www.city.higashiosaka.lg.jp/0000035654.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "先端設備等導入計画の認定を受けている",
+        "field": "project.advanced_equipment_plan_certified",
+        "operator": "==",
+        "value": true,
+        "source_url": "https://www.city.higashiosaka.lg.jp/0000035654.html",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "省エネ設備更新である",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "省エネ",
+          "設備更新",
+          "生産性向上"
+        ],
+        "weight": 20,
+        "source_url": "https://www.city.higashiosaka.lg.jp/0000035654.html"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "令和7年4月以降の先端設備等導入計画認定書はありますか？",
+        "field": "project.advanced_equipment_plan_certified",
+        "reason": "申請必須要件",
+        "answer_type": "boolean"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "対象設備・既存設備との用途同一性",
+        "reason": "設備仕様・写真確認が必要",
+        "source_url": "https://www.city.higashiosaka.lg.jp/0000035654.html"
+      }
+    ],
+    "source_urls": [
+      "https://www.city.higashiosaka.lg.jp/0000035654.html"
+    ],
+    "confidence": "high",
+    "review_required": true
+  },
+  {
+    "round_key": "hyogo_kasegu_equipment_1",
+    "hard_rules": [
+      {
+        "label": "兵庫県内に実施事業所がある",
+        "field": "company.prefecture",
+        "operator": "==",
+        "value": "兵庫県",
+        "source_url": "https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "中小企業者等である",
+        "field": "company.size_category",
+        "operator": "in",
+        "value": [
+          "sme",
+          "small_business"
+        ],
+        "source_url": "https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "商工会・商工会議所による経営指導を受ける",
+        "field": "project.chamber_guidance",
+        "operator": "==",
+        "value": true,
+        "source_url": "https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "収益力向上に資する設備投資",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "設備投資",
+          "生産性向上",
+          "省力化"
+        ],
+        "weight": 20,
+        "source_url": "https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "商工会・商工会議所へ経営指導を依頼済みですか？",
+        "field": "project.chamber_guidance",
+        "reason": "期限1週間前目安の依頼が必要",
+        "answer_type": "boolean"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "収益力向上につながる設備か",
+        "reason": "事業計画の確認が必要",
+        "source_url": "https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html"
+      }
+    ],
+    "source_urls": [
+      "https://web.pref.hyogo.lg.jp/sr07/kaseguchikara.html"
+    ],
+    "confidence": "high",
+    "review_required": true
+  },
+  {
+    "round_key": "kobe_dx_system_normal_2026",
+    "hard_rules": [
+      {
+        "label": "神戸市内に事業所がある",
+        "field": "company.city",
+        "operator": "==",
+        "value": "神戸市",
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxsystem.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "神戸市税滞納なし",
+        "field": "company.local_tax_clear",
+        "operator": "==",
+        "value": true,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxsystem.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "DXお助け隊の伴走型支援を複数回受けている",
+        "field": "project.kobe_dx_support",
+        "operator": "==",
+        "value": true,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxsystem.html",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "DX・システム導入である",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "DX",
+          "IT導入",
+          "システム導入"
+        ],
+        "weight": 20,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxsystem.html"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "神戸市DXお助け隊の伴走支援を複数回受けましたか？",
+        "field": "project.kobe_dx_support",
+        "reason": "申請必須要件",
+        "answer_type": "boolean"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "既存システム更新ではないか",
+        "reason": "新規導入のみ対象のため確認が必要",
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxsystem.html"
+      }
+    ],
+    "source_urls": [
+      "https://www.city.kobe.lg.jp/a93457/2026dxsystem.html"
+    ],
+    "confidence": "high",
+    "review_required": true
+  },
+  {
+    "round_key": "kobe_dx_hr_2026",
+    "hard_rules": [
+      {
+        "label": "神戸市内に事業所がある",
+        "field": "company.city",
+        "operator": "==",
+        "value": "神戸市",
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxjinzai.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "DXお助け隊の面談を受けている",
+        "field": "project.kobe_dx_interview",
+        "operator": "==",
+        "value": true,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxjinzai.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "研修時間が1人あたり6時間以上",
+        "field": "project.training_hours_per_person",
+        "operator": ">=",
+        "value": 6,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxjinzai.html",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "DX人材育成目的",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "DX",
+          "人材育成",
+          "研修"
+        ],
+        "weight": 20,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxjinzai.html"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "受講予定研修は1人あたり合計6時間以上ですか？",
+        "field": "project.training_hours_per_person",
+        "reason": "申請要件判定",
+        "answer_type": "number"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "研修内容がDXに関する高度知識・技能か",
+        "reason": "講座内容確認が必要",
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026dxjinzai.html"
+      }
+    ],
+    "source_urls": [
+      "https://www.city.kobe.lg.jp/a93457/2026dxjinzai.html"
+    ],
+    "confidence": "high",
+    "review_required": true
+  },
+  {
+    "round_key": "kobe_challenge_support_2026",
+    "hard_rules": [
+      {
+        "label": "5社以上の企業グループである",
+        "field": "project.group_company_count",
+        "operator": ">=",
+        "value": 5,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026challengesupport.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "神戸市内中小企業が全構成員の2分の1以上",
+        "field": "project.kobe_sme_ratio",
+        "operator": ">=",
+        "value": 0.5,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026challengesupport.html",
+        "confidence": "high",
+        "review_required": true
+      },
+      {
+        "label": "戦略産業分野に関する活動である",
+        "field": "project.industry_theme",
+        "operator": "in",
+        "value": [
+          "航空・宇宙",
+          "医療・健康・福祉",
+          "環境・エネルギー",
+          "農業・食糧"
+        ],
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026challengesupport.html",
+        "confidence": "high",
+        "review_required": true
+      }
+    ],
+    "soft_rules": [
+      {
+        "label": "共同受注・試作開発に該当",
+        "field": "company.investment_intent",
+        "operator": "contains_any",
+        "value": [
+          "共同受注",
+          "試作開発",
+          "新規事業",
+          "展示会"
+        ],
+        "weight": 20,
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026challengesupport.html"
+      }
+    ],
+    "questions_for_applicant": [
+      {
+        "question": "企業グループは5社以上で構成されていますか？",
+        "field": "project.group_company_count",
+        "reason": "単独企業は対象外",
+        "answer_type": "number"
+      }
+    ],
+    "manual_review_required_rules": [
+      {
+        "label": "グループの会則・活動目的の確認",
+        "reason": "規約・構成員情報の確認が必要",
+        "source_url": "https://www.city.kobe.lg.jp/a93457/2026challengesupport.html"
+      }
+    ],
+    "source_urls": [
+      "https://www.city.kobe.lg.jp/a93457/2026challengesupport.html"
+    ],
+    "confidence": "high",
+    "review_required": true
+  }
+]

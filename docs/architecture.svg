@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 566" width="680" height="566">
+<style>
+  text { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif; }
+  .t   { font-size:14px; fill:#1a1a1a; }
+  .ts  { font-size:12px; fill:#8a8a8e; }
+  .th  { font-size:14px; font-weight:500; fill:#1a1a1a; }
+  .title { font-size:16px; font-weight:700; fill:#1a1a1a; }
+  .rect-blue { fill:#eef3ff; stroke:#1a56f0; stroke-width:1; }
+  .rect-teal { fill:#e8f6f1; stroke:#15a673; stroke-width:1; }
+  .rect-gray { fill:#f3f4f6; stroke:#a8a8ad; stroke-width:1; stroke-dasharray:4 4; }
+  .region    { fill:none;    stroke:#cfcfd6; stroke-width:1; stroke-dasharray:4 4; }
+  .arr { stroke:#8a8a8e; stroke-width:1.5; fill:none; }
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#8a8a8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="680" height="566" fill="#ffffff"/>
+
+<text class="title" x="40" y="26">補助金ポケット — Phase 1 MVP システム構成</text>
+
+<!-- legend -->
+<rect x="40" y="40" width="12" height="12" rx="3" fill="#1a56f0"/>
+<text class="ts" x="58" y="50">自社実装（MVP）</text>
+<rect x="190" y="40" width="12" height="12" rx="3" fill="#15a673"/>
+<text class="ts" x="208" y="50">外部サービス（Buy）</text>
+<rect x="372" y="40" width="12" height="12" rx="3" fill="none" stroke="#a8a8ad" stroke-dasharray="3 3"/>
+<text class="ts" x="390" y="50">Phase 2 以降</text>
+
+<!-- client -->
+<rect class="rect-blue" x="70" y="64" width="250" height="44" rx="6"/>
+<text class="th" x="195" y="84" text-anchor="middle">需要側モバイルアプリ</text>
+<text class="ts" x="195" y="100" text-anchor="middle">Expo / React Native · 画面①〜⑤</text>
+<rect class="rect-gray" x="360" y="64" width="250" height="44" rx="6"/>
+<text class="th" x="485" y="84" text-anchor="middle">供給側 士業管理画面</text>
+<text class="ts" x="485" y="100" text-anchor="middle">Next.js · Phase 2</text>
+
+<line class="arr" x1="195" y1="108" x2="195" y2="130" marker-end="url(#arrow)"/>
+<line class="arr" x1="485" y1="108" x2="485" y2="130" marker-end="url(#arrow)" stroke-dasharray="4 4"/>
+
+<!-- api -->
+<rect class="rect-blue" x="160" y="130" width="360" height="44" rx="6"/>
+<text class="th" x="340" y="150" text-anchor="middle">API ゲートウェイ / BFF</text>
+<text class="ts" x="340" y="166" text-anchor="middle">NestJS · REST + SSE · AWS東京</text>
+
+<line class="arr" x1="340" y1="174" x2="340" y2="198" marker-end="url(#arrow)"/>
+
+<!-- services -->
+<rect class="rect-blue" x="40" y="198" width="138" height="44" rx="6"/>
+<text class="th" x="109" y="218" text-anchor="middle">診断サービス</text>
+<text class="ts" x="109" y="234" text-anchor="middle">URL解析→照合</text>
+<rect class="rect-blue" x="194" y="198" width="138" height="44" rx="6"/>
+<text class="th" x="263" y="218" text-anchor="middle">AI計画書サービス</text>
+<text class="ts" x="263" y="234" text-anchor="middle">本人の起草支援</text>
+<rect class="rect-blue" x="348" y="198" width="138" height="44" rx="6"/>
+<text class="th" x="417" y="218" text-anchor="middle">通知サービス</text>
+<text class="ts" x="417" y="234" text-anchor="middle">締切アラート</text>
+<rect class="rect-gray" x="502" y="198" width="138" height="44" rx="6"/>
+<text class="th" x="571" y="218" text-anchor="middle">マッチング/決済</text>
+<text class="ts" x="571" y="234" text-anchor="middle">Phase 2</text>
+
+<line class="arr" x1="140" y1="242" x2="140" y2="276" marker-end="url(#arrow)"/>
+<line class="arr" x1="430" y1="242" x2="430" y2="276" marker-end="url(#arrow)"/>
+
+<!-- data region -->
+<rect class="region" x="40" y="276" width="300" height="180" rx="8"/>
+<text class="ts" x="52" y="294">データ層（AWS東京）</text>
+<rect class="rect-blue" x="58" y="302" width="264" height="40" rx="5"/>
+<text class="th" x="190" y="320" text-anchor="middle">Aurora PostgreSQL + pgvector</text>
+<text class="ts" x="190" y="334" text-anchor="middle">制度 / 診断 / 計画書</text>
+<rect class="rect-blue" x="58" y="354" width="264" height="40" rx="5"/>
+<text class="th" x="190" y="372" text-anchor="middle">OpenSearch</text>
+<text class="ts" x="190" y="386" text-anchor="middle">補助金検索</text>
+<rect class="rect-blue" x="58" y="406" width="264" height="40" rx="5"/>
+<text class="th" x="190" y="424" text-anchor="middle">S3（暗号化）</text>
+<text class="ts" x="190" y="438" text-anchor="middle">計画書・添付</text>
+
+<!-- external region -->
+<rect class="region" x="360" y="276" width="280" height="234" rx="8"/>
+<text class="ts" x="372" y="294">外部サービス / インフラ</text>
+<rect class="rect-teal" x="378" y="302" width="244" height="40" rx="5"/>
+<text class="th" x="500" y="320" text-anchor="middle">Amazon Bedrock（Claude）</text>
+<text class="ts" x="500" y="334" text-anchor="middle">JP Geo・国内</text>
+<rect class="rect-blue" x="378" y="354" width="244" height="40" rx="5"/>
+<text class="th" x="500" y="372" text-anchor="middle">Playwright ワーカー</text>
+<text class="ts" x="500" y="386" text-anchor="middle">自社URL取得</text>
+<rect class="rect-teal" x="378" y="406" width="244" height="40" rx="5"/>
+<text class="th" x="500" y="424" text-anchor="middle">Expo Push / Amazon SES</text>
+<text class="ts" x="500" y="438" text-anchor="middle">通知配信</text>
+<rect class="rect-gray" x="378" y="458" width="244" height="40" rx="5"/>
+<text class="th" x="500" y="476" text-anchor="middle">eKYC / Stripe Connect</text>
+<text class="ts" x="500" y="490" text-anchor="middle">Phase 2</text>
+
+<!-- pipeline region -->
+<rect class="region" x="40" y="470" width="300" height="76" rx="8"/>
+<text class="ts" x="52" y="488">データパイプライン（日次バッチ）</text>
+<rect class="rect-teal" x="58" y="496" width="128" height="40" rx="5"/>
+<text class="th" x="122" y="514" text-anchor="middle">jGrants 公開API</text>
+<text class="ts" x="122" y="528" text-anchor="middle">読取専用GET</text>
+<rect class="rect-blue" x="206" y="496" width="116" height="40" rx="5"/>
+<text class="th" x="264" y="514" text-anchor="middle">ETL 正規化</text>
+<text class="ts" x="264" y="528" text-anchor="middle">日次・構造化</text>
+<line class="arr" x1="186" y1="516" x2="206" y2="516" marker-end="url(#arrow)"/>
+<line class="arr" x1="120" y1="470" x2="120" y2="456" marker-end="url(#arrow)"/>
+</svg>

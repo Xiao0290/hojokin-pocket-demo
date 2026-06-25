@@ -1,0 +1,112 @@
+{
+  "schema": "hojokin-pocket.phase1.company-profile-fixture.v1",
+  "fixtureType": "development-only",
+  "url": "https://www.sample-corp.example/ja/",
+  "canonicalUrl": "https://sample-corp.example/ja/",
+  "sourceUrl": "https://www.sample-corp.example/ja/",
+  "lastSeenAt": "2026-06-20",
+  "name": "株式会社サンプル商会 / SAMPLE",
+  "prefecture": null,
+  "city": null,
+  "businessSummary": "宿泊運営、AI業務自動化、日中貿易、金属加工、3Dプリント試作を扱う日本拠点の実行支援会社。公式サイトの会社概要セクションでは、相談、業務整理、調達進行、試作、運用改善を対応内容としている。",
+  "keywords": [
+    "宿泊運営",
+    "ホテル",
+    "民泊",
+    "AI業務自動化",
+    "日中貿易",
+    "調達進行",
+    "金属加工",
+    "3Dプリント",
+    "試作",
+    "運用改善",
+    "業務整理"
+  ],
+  "unknowns": [
+    "公式サイトの取得HTMLと公開JavaScript bundle内では、都道府県・市区町村を確認できなかった。",
+    "所在地、法人番号、代表者、資本金、従業員数は公式サイト上で確認できなかった。",
+    "同名または類似名の法人情報は存在するが、このfixtureでは公式サイトから確認できない情報を推定していない。",
+    "補助金の申請可否判定には、登記情報、確定申告・決算書、従業員数、業種、設備投資計画の追加確認が必要。"
+  ],
+  "fallback": {
+    "used": true,
+    "reason": "The HTML body is a React root and does not contain rendered company details. The fixture falls back to official meta tags plus public strings embedded in the site's JavaScript bundle.",
+    "evidence": [
+      "HTML title: 株式会社サンプル商会 | SAMPLE",
+      "HTML meta description: 株式会社サンプル商会（SAMPLE）は、宿泊運営、AI業務自動化、日中貿易、金属加工、3Dプリント試作を扱う日本拠点の実行支援会社です。",
+      "Bundle company rows: 会社名=株式会社サンプル商会 / SAMPLE, 事業領域=ホテル・民泊運営、AI業務自動化、日中貿易・金属加工、3Dプリント, 対応内容=相談、業務整理、調達進行、試作、運用改善"
+    ]
+  },
+  "evidence": [
+    {
+      "label": "Cached official Japanese homepage HTML",
+      "url": "https://www.sample-corp.example/ja/",
+      "sourceType": "official_site_html_cache",
+      "observedAt": "2026-06-20",
+      "localPath": "data/fixtures/company-sites/sample-corp.html",
+      "supports": [
+        "name",
+        "canonicalUrl",
+        "businessSummary",
+        "keywords"
+      ],
+      "note": "HTML title, canonical link, meta description, Open Graph description, and Twitter description all identify 株式会社サンプル商会 / SAMPLE and the public business domains."
+    },
+    {
+      "label": "Cached redirect and response headers",
+      "url": "https://www.sample-corp.example/ja/",
+      "sourceType": "official_site_headers_cache",
+      "observedAt": "2026-06-20",
+      "localPath": "data/fixtures/company-sites/sample-corp.headers.txt",
+      "supports": [
+        "url",
+        "canonicalUrl",
+        "lastSeenAt"
+      ],
+      "note": "Header trace confirms www and root redirect behavior ending in the Japanese homepage served through the official domain."
+    },
+    {
+      "label": "Official public JavaScript bundle referenced by homepage",
+      "url": "https://www.sample-corp.example/assets/index-jAD0CBPR.js",
+      "sourceType": "official_site_bundle",
+      "observedAt": "2026-06-20",
+      "supports": [
+        "businessSummary",
+        "keywords",
+        "fallback"
+      ],
+      "note": "Used only for rendered company-section strings that are not present in the static React root HTML cache."
+    }
+  ],
+  "sourceNotes": [
+    "The cached HTML body only contains a React root, so rendered company details are derived from official metadata and the public JavaScript bundle referenced by that page.",
+    "Do not infer address, prefecture, representative, capital, employee count, or corporate number from third-party records in this fixture.",
+    "The fixture is sufficient for Phase 1 proposal explanations about business domains, but not for legal eligibility or company-size checks."
+  ],
+  "citations": [
+    {
+      "label": "Official Japanese homepage",
+      "url": "https://www.sample-corp.example/ja/",
+      "sourceType": "official_site_html",
+      "usedFor": [
+        "name",
+        "businessSummary",
+        "canonicalUrl"
+      ]
+    },
+    {
+      "label": "Official public JavaScript bundle referenced by homepage",
+      "url": "https://www.sample-corp.example/assets/index-jAD0CBPR.js",
+      "sourceType": "official_site_bundle",
+      "usedFor": [
+        "business domains",
+        "support scope",
+        "contact-row existence"
+      ]
+    }
+  ],
+  "fixtureNotes": [
+    "This company profile is only a seed profile for local matching screens. It intentionally keeps prefecture and city null instead of guessing.",
+    "Do not display contact phone/email from this fixture unless the product explicitly needs public contact details; the current Phase 1 matching flow only needs business keywords."
+  ]
+}

@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Verify
+        run: npm run verify:ci
+
+      - name: Collect quality reports
+        if: always()
+        run: |
+          mkdir -p output/ci
+          npm run score:phase1 > output/ci/phase1-score.txt || true
+          npm run score:multidim > output/ci/multidim-score.txt || true
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hojokin-pocket-ci-artifacts
+          path: |
+            output/ci
+            output/playwright
+            data/exports

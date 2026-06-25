@@ -1,0 +1,49 @@
+<!-- @dsCard group="Components" viewport="700x460" name="Forms — Button / Input / Checkbox" subtitle="Primary actions, URL field, AI checklist rows" -->
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font); background: #fff; color: var(--ink); }
+  .stage { padding: 24px; display: flex; flex-direction: column; gap: 20px; max-width: 380px; }
+  .lbl { font-size: 12px; color: var(--gray-500); font-weight: 600; margin-bottom: -10px; }
+  .row { display: flex; gap: 12px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body><div id="root" class="stage"></div>
+<script type="text/babel">
+  const { Button, Input, Checkbox } = window.DesignSystem_a96fc8
+  function Demo() {
+    const [url, setUrl] = React.useState('sample-corp.example')
+    const [a, setA] = React.useState(true)
+    const [b, setB] = React.useState(false)
+    return (
+      <>
+        <div className="lbl">Button — variants</div>
+        <Button variant="primary">補助金を診断する</Button>
+        <div className="row">
+          <Button variant="secondary">専門家に依頼する</Button>
+          <Button variant="ghost">自分で申請</Button>
+        </div>
+        <div className="lbl">Button — sizes / states</div>
+        <div className="row">
+          <Button size="sm">送信</Button>
+          <Button loading>処理中</Button>
+          <Button disabled>診断する</Button>
+        </div>
+        <div className="lbl">Input</div>
+        <Input label="会社のURL" placeholder="https://会社のURL" value={url} onChange={(e)=>setUrl(e.target.value)} />
+        <div className="lbl">Checkbox — application checklist</div>
+        <div>
+          <Checkbox label="事業計画書を作成する" aiTag checked={a} onChange={setA} />
+          <Checkbox label="決算書を準備する（直近2期）" checked={b} onChange={setB} />
+        </div>
+      </>
+    )
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />)
+</script>
+</body></html>
